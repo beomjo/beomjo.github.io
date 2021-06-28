@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-06-29T02:30:03+09:00</updated><id>/feed.xml</id><title type="html">Beom Log</title><subtitle>beomjo amazing website.</subtitle><author><name>beomjo</name></author><entry><title type="html">Jekyll, minimal-mistakes 테마를 적용하기</title><link href="/blogs/create-blog/" rel="alternate" type="text/html" title="Jekyll, minimal-mistakes 테마를 적용하기" /><published>2021-06-29T00:00:00+09:00</published><updated>2021-06-29T00:00:00+09:00</updated><id>/blogs/create-blog</id><content type="html" xml:base="/blogs/create-blog/">&lt;h1 id=&quot;jekyll-minimal-mistakes-테마를-적용하기&quot;&gt;Jekyll, minimal-mistakes 테마를 적용하기&lt;/h1&gt;
+
+&lt;h2 id=&quot;설정&quot;&gt;설정&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Github Pages 호스팅을 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;${GITHUB_ID}.github.io&lt;/code&gt; 라는 이름으로 리파지토리를 생성해야 한다&lt;/li&gt;
+  &lt;li&gt;Gem을 이용해서 Jekyll 을 설치한다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;테마-적용&quot;&gt;테마 적용&lt;/h2&gt;
+&lt;p&gt;minimal-mistake &lt;a href=&quot;https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/&quot;&gt;빠른 시작 가이드&lt;/a&gt;를 참고하여 진행한다.&lt;br /&gt;
+&lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;minimal-mistake&lt;/a&gt; Repository에서 소스를 가져와 옮긴다.&lt;br /&gt;
+옮긴 후 다음 과정을 진행한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;불필요-내용-제거&quot;&gt;불필요 내용 제거&lt;/h3&gt;
+&lt;p&gt;minimal-mistakes-jekyll repository에서 소스를 가져왔다면 불필요한 내용을 제거한다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;.editorconfig&lt;/li&gt;
+  &lt;li&gt;.gitattributes&lt;/li&gt;
+  &lt;li&gt;.github&lt;/li&gt;
+  &lt;li&gt;/docs&lt;/li&gt;
+  &lt;li&gt;/test&lt;/li&gt;
+  &lt;li&gt;CHANGELOG.md&lt;/li&gt;
+  &lt;li&gt;minimal-mistakes-jekyll.gemspec&lt;/li&gt;
+  &lt;li&gt;README.md&lt;/li&gt;
+  &lt;li&gt;screenshot-layouts.png&lt;/li&gt;
+  &lt;li&gt;screenshot.png&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;_config-파일-설정&quot;&gt;_config 파일 설정&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yaml&lt;/code&gt; 파일에서 아래와 값들을 설정해준다&lt;/p&gt;
+
+&lt;h4 id=&quot;기본-구성&quot;&gt;기본 구성&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Site Settings
+minimal_mistakes_skin    : &quot;dark&quot;
+title                    : &quot;Beom Log&quot;
+name                     : &quot;취미코딩하는 개발자&quot;
+description              : &quot;회사에서는 월급 받고 집에서는 취미로 코딩하는 개발자의 블로그&quot;
+url                      : &quot;https://beomjo.github.io&quot;
+baseurl                  : # 서브 경로가 있는 경우 기재
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;teaser와-logo-그림-파일&quot;&gt;teaser와 logo 그림 파일&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;teaser                   : &quot;/assets/images/bio.jpg&quot;
+logo                     : # 최상단 메뉴 바에 사이트 로고 넣기
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;댓글&quot;&gt;댓글&lt;/h4&gt;
+&lt;p&gt;블로그 댓글 기능 disqus, discourse, facebook, staticman, utterances 정도가 대표적이다. &lt;br /&gt;
+GitHub Pages 자체적으로 댓글을 제공하고 있지 않기때문에 보통 외부 댓글 서비스를 연결해주는 방식을 사용한다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;comments:
+  provider               : # 블로그 댓글 기능 false (default), &quot;disqus&quot;, &quot;discourse&quot;, &quot;facebook&quot;, &quot;staticman&quot;, &quot;staticman_v2&quot;, &quot;utterances&quot;, &quot;custom&quot;
+  disqus:
+    shortname            : # 블로그 댓글 기능 https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+  discourse:
+    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+  facebook:
+    # https://developers.facebook.com/docs/plugins/comments
+    appid                :
+    num_posts            : # 5 (default)
+    colorscheme          : # &quot;light&quot; (default), &quot;dark&quot;
+  utterances:
+    theme                : # &quot;github-light&quot; (default), &quot;github-dark&quot;
+    issue_term           : # &quot;pathname&quot; (default)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;저자-설정&quot;&gt;저자 설정&lt;/h4&gt;
+&lt;p&gt;minimal-mistakes theme은 사이트 좌측 사이드바에 기본으로 사이트 저자 소개를 설정한다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Site Author
+author:
+  name             : &quot;beomjo&quot;
+  avatar           : &quot;/assets/images/bio-photo.jpg&quot;
+  bio              : &quot;beomjo dev log 🧑‍💻&quot;
+  location         : &quot;South Korea&quot;
+  email            :
+  links:
+    - label: &quot;Email&quot;
+      icon: &quot;fas fa-fw fa-envelope-square&quot;
+      url: &quot;qjatjr1108@gmail.com&quot;
+    - label: &quot;Blog&quot;
+      icon: &quot;fas fa-fw fa-link&quot;
+      url: &quot;https://beomseok95.tistory.com/&quot;
+    - label: &quot;GitHub&quot;
+      icon: &quot;fab fa-fw fa-github&quot;
+      url: &quot;https://github.com/beomjo&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;저자-설정---footer&quot;&gt;저자 설정 - Footer&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Site Footer
+footer:
+  links:
+    - label: &quot;GitHub&quot;
+      icon: &quot;fab fa-fw fa-github&quot;
+      url: &quot;https://github.com/beomjo&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;블로그-표시방법-설정&quot;&gt;블로그 표시방법 설정&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Outputting
+permalink: /:categories/:title/
+paginate: 5 # 첫 페이지에보여줄 최근 게시물 수를 지정
+paginate_path: /page:num/
+timezone: Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;포스트-쓰기&quot;&gt;포스트 쓰기&lt;/h2&gt;
+&lt;p&gt;포스트는 특정 제목으로 작성되어야 한다. &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YYYY-MM-DD-{TITLE}.md&lt;/code&gt; 형식으로 파일명을 작성한다 . 
+메타데이터를 위한 yaml 부분을 상단에작성하고, 본문을 위한 마크다운 부분을 그 아래에 작성한다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+title: Jekyll, minimal-mistakes 테마를 적용하기
+categories:
+  - Blogs
+tags:
+  - Blog
+  - Jekyll
+  - minimal-mistakes
+toc: true
+---
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>beomjo</name></author><category term="Blogs" /><category term="Blog" /><category term="Jekyll" /><category term="minimal-mistakes" /><summary type="html">Jekyll, minimal-mistakes 테마를 적용하기</summary></entry></feed>

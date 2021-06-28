@@ -3,7 +3,6 @@
 .jekyll-cache/*
 .jekyll-cache/Jekyll/
 .jekyll-cache/Jekyll/*
-_site/feed.xml
 .jekyll-cache/Jekyll/Cache/Jekyll--Cache/b7
 .jekyll-cache/Jekyll/Cache/Jekyll--Cache/b7/
 .jekyll-cache/Jekyll/Cache/Jekyll--Cache/b7/*
@@ -11,8 +10,6 @@ _site/feed.xml
 .jekyll-cache/Jekyll/Cache/Module/87
 .jekyll-cache/Jekyll/Cache/Module/c2
 .jekyll-cache/Jekyll/Cache/Module/dc
-_site/feed.xml
 .jekyll-cache/Jekyll/Cache/Jekyll--Converters--Markdown
 .sass-cache
-.jekyll-metadata
 Gemfile.lock

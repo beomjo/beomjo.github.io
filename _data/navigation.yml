@@ -1,8 +1,8 @@
 # main links
 main:
   - title: "About"
-    url: /about.md/
+    url: /about/
   - title: "Categories"
-    url: /categories.md/
+    url: /categories/
   - title: "Tags"
-    url: /tags.md/
+    url: /tags/

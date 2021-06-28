@@ -130,6 +130,8 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
+          <a class="site-logo" href="/"><img src="/assets/images/bio-photo.jpg" alt="Beom Log"></a>
+        
         <a class="site-title" href="/">
           Beom Log
           
@@ -300,7 +302,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          1 minute read
         
       </span>
     
@@ -315,7 +317,7 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#jekyll-minimal-mistakes-테마를-적용하기">Jekyll, minimal-mistakes 테마를 적용하기</a><ul><li><a href="#설정">설정</a></li><li><a href="#테마-적용">테마 적용</a><ul><li><a href="#불필요-내용-제거">불필요 내용 제거</a></li><li><a href="#_config-파일-설정">_config 파일 설정</a></li></ul></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#jekyll-minimal-mistakes-테마를-적용하기">Jekyll, minimal-mistakes 테마를 적용하기</a><ul><li><a href="#설정">설정</a></li><li><a href="#테마-적용">테마 적용</a><ul><li><a href="#불필요-내용-제거">불필요 내용 제거</a></li><li><a href="#_config-파일-설정">_config 파일 설정</a><ul><li><a href="#기본-구성">기본 구성</a></li><li><a href="#teaser와-logo-그림-파일">teaser와 logo 그림 파일</a></li><li><a href="#댓글">댓글</a></li><li><a href="#저자-설정">저자 설정</a></li><li><a href="#저자-설정---footer">저자 설정 - Footer</a></li><li><a href="#블로그-표시방법-설정">블로그 표시방법 설정</a></li></ul></li></ul></li><li><a href="#포스트-쓰기">포스트 쓰기</a></li></ul></li></ul>
 
             </nav>
           </aside>
@@ -324,13 +326,13 @@
 
 <h2 id="설정">설정</h2>
 <ul>
-  <li>Github Pages 호스팅을 위해 #{GITHUB_ID}.github.io 라는 이름으로 리파지토리를 생성해야 한다</li>
+  <li>Github Pages 호스팅을 위해 <code class="language-plaintext highlighter-rouge">${GITHUB_ID}.github.io</code> 라는 이름으로 리파지토리를 생성해야 한다</li>
   <li>Gem을 이용해서 Jekyll 을 설치한다</li>
 </ul>
 
 <h2 id="테마-적용">테마 적용</h2>
 <p>minimal-mistake <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">빠른 시작 가이드</a>를 참고하여 진행한다.<br />
-<a href="https://github.com/mmistakes/minimal-mistakes">minimal-mistake</a>소스를 가져와 옮긴다.<br />
+<a href="https://github.com/mmistakes/minimal-mistakes">minimal-mistake</a> Repository에서 소스를 가져와 옮긴다.<br />
 옮긴 후 다음 과정을 진행한다.</p>
 
 <h3 id="불필요-내용-제거">불필요 내용 제거</h3>
@@ -351,13 +353,92 @@
 <h3 id="_config-파일-설정">_config 파일 설정</h3>
 <p><code class="language-plaintext highlighter-rouge">_config.yaml</code> 파일에서 아래와 값들을 설정해준다</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>minimal_mistakes_skin    : "dark"
+<h4 id="기본-구성">기본 구성</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Site Settings
+minimal_mistakes_skin    : "dark"
 title                    : "Beom Log"
 name                     : "취미코딩하는 개발자"
 description              : "회사에서는 월급 받고 집에서는 취미로 코딩하는 개발자의 블로그"
 url                      : "https://beomjo.github.io"
 baseurl                  : # 서브 경로가 있는 경우 기재
-author                   : 프로필에 표시할 작가 정보들
+</code></pre></div></div>
+
+<h4 id="teaser와-logo-그림-파일">teaser와 logo 그림 파일</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>teaser                   : "/assets/images/bio.jpg"
+logo                     : # 최상단 메뉴 바에 사이트 로고 넣기
+</code></pre></div></div>
+
+<h4 id="댓글">댓글</h4>
+<p>블로그 댓글 기능 disqus, discourse, facebook, staticman, utterances 정도가 대표적이다. <br />
+GitHub Pages 자체적으로 댓글을 제공하고 있지 않기때문에 보통 외부 댓글 서비스를 연결해주는 방식을 사용한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>comments:
+  provider               : # 블로그 댓글 기능 false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  disqus:
+    shortname            : # 블로그 댓글 기능 https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+  discourse:
+    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+  facebook:
+    # https://developers.facebook.com/docs/plugins/comments
+    appid                :
+    num_posts            : # 5 (default)
+    colorscheme          : # "light" (default), "dark"
+  utterances:
+    theme                : # "github-light" (default), "github-dark"
+    issue_term           : # "pathname" (default)
+</code></pre></div></div>
+
+<h4 id="저자-설정">저자 설정</h4>
+<p>minimal-mistakes theme은 사이트 좌측 사이드바에 기본으로 사이트 저자 소개를 설정한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Site Author
+author:
+  name             : "beomjo"
+  avatar           : "/assets/images/bio-photo.jpg"
+  bio              : "beomjo dev log 🧑‍💻"
+  location         : "South Korea"
+  email            :
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "qjatjr1108@gmail.com"
+    - label: "Blog"
+      icon: "fas fa-fw fa-link"
+      url: "https://beomseok95.tistory.com/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/beomjo"
+</code></pre></div></div>
+
+<h4 id="저자-설정---footer">저자 설정 - Footer</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Site Footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/beomjo"
+</code></pre></div></div>
+
+<h4 id="블로그-표시방법-설정">블로그 표시방법 설정</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Outputting
+permalink: /:categories/:title/
+paginate: 5 # 첫 페이지에보여줄 최근 게시물 수를 지정
+paginate_path: /page:num/
+timezone: Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+</code></pre></div></div>
+
+<h2 id="포스트-쓰기">포스트 쓰기</h2>
+<p>포스트는 특정 제목으로 작성되어야 한다. <br />
+<code class="language-plaintext highlighter-rouge">YYYY-MM-DD-{TITLE}.md</code> 형식으로 파일명을 작성한다 . 
+메타데이터를 위한 yaml 부분을 상단에작성하고, 본문을 위한 마크다운 부분을 그 아래에 작성한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+title: Jekyll, minimal-mistakes 테마를 적용하기
+categories:
+  - Blogs
+tags:
+  - Blog
+  - Jekyll
+  - minimal-mistakes
+toc: true
+---
 </code></pre></div></div>
 
         

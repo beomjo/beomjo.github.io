@@ -9,8 +9,6 @@ tags:
 toc: true
 ---
 
-# Jekyll, minimal-mistakes 테마를 적용하기  
-
 ## 설정
 - Github Pages 호스팅을 위해 `${GITHUB_ID}.github.io` 라는 이름으로 리파지토리를 생성해야 한다
 - Gem을 이용해서 Jekyll 을 설치한다

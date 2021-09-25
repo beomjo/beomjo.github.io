@@ -1,4 +1,4 @@
-# 개인 블로그  
+# Beom log
 https://beomjo.github.io/
 
 ## 테마  

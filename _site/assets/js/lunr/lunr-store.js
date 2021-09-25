@@ -1,8 +1,8 @@
 var store = [{
         "title": "BOJ 9093. 단어 뒤집기",
-        "excerpt":"BOJ 9093. 단어 뒤집기 www.acmicpc.net/problem/9093 문제 문장이 주어졌을 때, 단어를 모두 뒤집어서 출력하는 프로그램을 작성하시오. 단, 단어의 순서는 바꿀 수 없다. 단어는 영어 알파벳으로만 이루어져 있다. 입력 첫째 줄에 테스트 케이스의 개수 T가 주어진다. 각 테스트 케이스는 한 줄로 이루어져 있으며, 문장이 하나 주어진다. 단어의 길이는 최대 20, 문장의 길이는...","categories": ["Algorithm"],
+        "excerpt":"BOJ 9093. 단어 뒤집기 www.acmicpc.net/problem/9093 문제 문장이 주어졌을 때, 단어를 모두 뒤집어서 출력하는 프로그램을 작성하시오. 단, 단어의 순서는 바꿀 수 없다. 단어는 영어 알파벳으로만 이루어져 있다. 입력 첫째 줄에 테스트 케이스의 개수 T가 주어진다. 각 테스트 케이스는 한 줄로 이루어져 있으며, 문장이 하나 주어진다. 단어의 길이는 최대 20, 문장의 길이는...","categories": ["BOJ"],
         "tags": ["Algorithm","BOJ"],
-        "url": "/algorithm/boj-9093/",
+        "url": "/boj/boj-9093/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
         "title": "Jekyll, minimal-mistakes 테마를 적용하기",

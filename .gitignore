@@ -13,3 +13,9 @@
 .jekyll-cache/Jekyll/Cache/Jekyll--Converters--Markdown
 .sass-cache
 Gemfile.lock
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/

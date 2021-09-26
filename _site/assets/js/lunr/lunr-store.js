@@ -47,6 +47,12 @@ var store = [{
         "url": "/boj/boj-17413/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 1929. 소수구하기",
+        "excerpt":"BOJ 1929. 소수 구하기 풀이 입력이 1 &lt;= M &lt;= N &lt;= 1,000,000 이므로  소수 찾기  방식을 사용하면 시간 초과가 발생한다 시간 복잡도를 잘 계산하지 않으면 시간 초과가 발생하는것이다. 시간 복잡도를 줄이기 위해 에라토스테네스의 체 [wiki] 알고리즘을 사용한다 1~120까지 수가 있을 때  1을 제외한 지워지지 않은 가장 작은 소수는 2이다. 2의 배수를 모두 제거...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-1929/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "BOJ 1978. 소수 찾기",
         "excerpt":"BOJ 1978. 소수 찾기 풀이 소수란 1과 자기 자신밖에 존재하지 않는 수 소수 구하기 1 boolean isPrime(int n) { if (n &lt; 2) { return false; } for (int i = 2; i &lt;= n-1; i++) { if (n % i == 0) { return false; } } return true; }  N이 소수가...","categories": ["BOJ"],
         "tags": ["Algorithm","BOJ"],

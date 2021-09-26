@@ -155,6 +155,12 @@ var store = [{
         "url": "/boj/boj-14002/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 1912. 연속합",
+        "excerpt":"BOJ 1912. 연속합 풀이 d[i] = n개의 정수로 이루어진 임의의 수열 에서 i로 끝나는 연속합(연속된 몇 개의 수를 선택해서 구할 수 있는 값 중 가장 큰 값) 임의의 수열에서 i로 끝나는 경우는 2가지가 있다 1. i-1번째와 i번째가 연속하는 경우 -&gt; d[i-1]+arr[i] 2.i-1번째와 i번째가 연속하지 않는 경우 -&gt; arr[i] 점화식 d[i]...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-1912/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "Jekyll, minimal-mistakes 테마를 적용하기",
         "excerpt":"설정 Github Pages 호스팅을 위해 ${GITHUB_ID}.github.io 라는 이름으로 리파지토리를 생성해야 한다 Gem을 이용해서 Jekyll 을 설치한다 테마 적용 minimal-mistake 빠른 시작 가이드를 참고하여 진행한다. minimal-mistake Repository에서 소스를 가져와 옮긴다. 옮긴 후 다음 과정을 진행한다. 불필요 내용 제거 minimal-mistakes-jekyll repository에서 소스를 가져왔다면 불필요한 내용을 제거한다. .editorconfig .gitattributes .github /docs /test CHANGELOG.md...","categories": ["Blogs"],
         "tags": ["Jekyll","minimal-mistakes"],

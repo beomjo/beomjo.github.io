@@ -47,6 +47,12 @@ var store = [{
         "url": "/boj/boj-17413/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 1978. 소수 찾기",
+        "excerpt":"BOJ 1978. 소수 찾기 풀이 소수란 1과 자기 자신밖에 존재하지 않는 수 소수 구하기 1 boolean isPrime(int n) { if (n &lt; 2) { return false; } for (int i = 2; i &lt;= n-1; i++) { if (n % i == 0) { return false; } } return true; }  N이 소수가...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-1978/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "BOJ 2609. 최대공약수와 최소공배수",
         "excerpt":"BOJ 2609. 최대공약수와 최소공배수 풀이 최대 공약수를 구하는 방법 1 int getGCP(int a, int b) { int r = 1; for (int i = 2; i &lt; Math.min(a, b); i++) { if (a % i == 0 &amp;&amp; b % i == 0) { r = i; } } return r; } 2부터 a와...","categories": ["BOJ"],
         "tags": ["Algorithm","BOJ"],

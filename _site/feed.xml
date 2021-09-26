@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-09-27T01:01:39+09:00</updated><id>/feed.xml</id><title type="html">Beom Log</title><subtitle>beomjo amazing website.</subtitle><author><name>beomjo</name></author><entry><title type="html">Jekyll, minimal-mistakes 테마를 적용하기</title><link href="/blogs/create-blog/" rel="alternate" type="text/html" title="Jekyll, minimal-mistakes 테마를 적용하기" /><published>2021-06-29T00:00:00+09:00</published><updated>2021-06-29T00:00:00+09:00</updated><id>/blogs/create-blog</id><content type="html" xml:base="/blogs/create-blog/">&lt;h2 id=&quot;설정&quot;&gt;설정&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-09-27T01:04:22+09:00</updated><id>/feed.xml</id><title type="html">Beom Log</title><subtitle>beomjo amazing website.</subtitle><author><name>beomjo</name></author><entry><title type="html">Jekyll, minimal-mistakes 테마를 적용하기</title><link href="/blogs/create-blog/" rel="alternate" type="text/html" title="Jekyll, minimal-mistakes 테마를 적용하기" /><published>2021-06-29T00:00:00+09:00</published><updated>2021-06-29T00:00:00+09:00</updated><id>/blogs/create-blog</id><content type="html" xml:base="/blogs/create-blog/">&lt;h2 id=&quot;설정&quot;&gt;설정&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Github Pages 호스팅을 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;${GITHUB_ID}.github.io&lt;/code&gt; 라는 이름으로 리파지토리를 생성해야 한다&lt;/li&gt;
   &lt;li&gt;Gem을 이용해서 Jekyll 을 설치한다&lt;/li&gt;
@@ -113,7 +113,64 @@ tags:
   - minimal-mistakes
 toc: true
 ---
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>beomjo</name></author><category term="Blogs" /><category term="Jekyll" /><category term="minimal-mistakes" /><summary type="html">설정 Github Pages 호스팅을 위해 ${GITHUB_ID}.github.io 라는 이름으로 리파지토리를 생성해야 한다 Gem을 이용해서 Jekyll 을 설치한다</summary></entry><entry><title type="html">BOJ 1699. 제곱수의 합</title><link href="/boj/boj-1699/" rel="alternate" type="text/html" title="BOJ 1699. 제곱수의 합" /><published>2021-03-13T00:00:00+09:00</published><updated>2021-03-13T00:00:00+09:00</updated><id>/boj/boj-1699</id><content type="html" xml:base="/boj/boj-1699/">&lt;h2 id=&quot;boj-1699-제곱수의-합&quot;&gt;&lt;strong&gt;BOJ 1699. 제곱수의 합&lt;/strong&gt;&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>beomjo</name></author><category term="Blogs" /><category term="Jekyll" /><category term="minimal-mistakes" /><summary type="html">설정 Github Pages 호스팅을 위해 ${GITHUB_ID}.github.io 라는 이름으로 리파지토리를 생성해야 한다 Gem을 이용해서 Jekyll 을 설치한다</summary></entry><entry><title type="html">BOJ 1476. 날짜계산</title><link href="/boj/boj-1476/" rel="alternate" type="text/html" title="BOJ 1476. 날짜계산" /><published>2021-03-17T00:00:00+09:00</published><updated>2021-03-17T00:00:00+09:00</updated><id>/boj/boj-1476</id><content type="html" xml:base="/boj/boj-1476/">&lt;h2 id=&quot;boj1476날짜-계산&quot;&gt;&lt;strong&gt;BOJ 1476. 날짜 계산&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134815296-b916a432-f037-45fc-a6a0-d89f0bc88330.png&quot; alt=&quot;image&quot; /&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134815298-d1b52a7d-549d-47c6-9438-f038df298758.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;(1 &amp;lt;= E &amp;lt;= 15) , (1 &amp;lt;= S &amp;lt;=28), (1 &amp;lt;= M &amp;lt;=19)&lt;br /&gt;
+이므로 경우의 수는 15 * 28 * 19 = 7980으로 &lt;br /&gt;
+1초 안에 수행할 수 있는 수 1억에 한참 못 미치는 숫자로, 여유 있게 구할 수 있으니&lt;br /&gt;
+모든 경우의 수를 대입해 본다.&lt;/p&gt;
+
+&lt;p&gt;경우의 수 1~7980을 각각 E (15), S(28), M(19)로 나누었을 때 나머지를 구하여서 &lt;br /&gt;
+입력과 같은지 확인해보면 된다.&lt;/p&gt;
+
+&lt;p&gt;입력받은 수에 모두 -1을 해주고&lt;br /&gt;
+출력하기 전에 i에 +1을 해준다 (나머지 연산 예외처리 , ex) 15%15, 30%15.. 일 때 0이므로)&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.io.IOException;
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        int e = sc.nextInt() - 1;
+        int m = sc.nextInt() - 1;
+        int s = sc.nextInt() - 1;
+
+        for (int i = 0; ; i++) {
+            if (i % 15 == e &amp;amp;&amp;amp; i % 28 == m &amp;amp;&amp;amp; i % 19 == s) {
+                System.out.println(i + 1);
+                sc.close();
+                System.exit(0);
+            }
+        }
+    }
+} 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.util.*
+import kotlin.system.exitProcess
+
+fun main() = with(Scanner(System.`in`)) {
+    val e = nextInt() - 1
+    val m = nextInt() - 1
+    val s = nextInt() - 1
+
+    var i = 0
+    while (true) {
+        if (i % 15 == e &amp;amp;&amp;amp; i % 28 == m &amp;amp;&amp;amp; i % 19 == s) {
+            println(i + 1)
+            exitProcess(0)
+        }
+        i++
+    }
+} 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/commit/6b26ce6f92e3b115bc5dff1feea3691d64905959&quot;&gt;github.com/beomjo/algorithm-study/commit/6b26ce6f92e3b115bc5dff1feea3691d64905959&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 1476. 날짜 계산</summary></entry><entry><title type="html">BOJ 1699. 제곱수의 합</title><link href="/boj/boj-1699/" rel="alternate" type="text/html" title="BOJ 1699. 제곱수의 합" /><published>2021-03-13T00:00:00+09:00</published><updated>2021-03-13T00:00:00+09:00</updated><id>/boj/boj-1699</id><content type="html" xml:base="/boj/boj-1699/">&lt;h2 id=&quot;boj-1699-제곱수의-합&quot;&gt;&lt;strong&gt;BOJ 1699. 제곱수의 합&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134815178-5f8a1b76-a832-4563-8530-082bd99a61d7.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
@@ -319,79 +376,7 @@ fun main() {
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/commit/2927f0207bb85c7dce70681a1aecef2d41903a2d&quot;&gt;github.com/beomjo/algorithm-study/commit/2927f0207bb85c7dce70681a1aecef2d41903a2d&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 14002. 가장 긴 증가하는 부분수열 4 (LIS)</summary></entry><entry><title type="html">BOJ 11053. 가장 긴 증가하는 부분수열 (LIS)</title><link href="/boj/boj-11053/" rel="alternate" type="text/html" title="BOJ 11053. 가장 긴 증가하는 부분수열 (LIS)" /><published>2021-03-05T00:00:00+09:00</published><updated>2021-03-05T00:00:00+09:00</updated><id>/boj/boj-11053</id><content type="html" xml:base="/boj/boj-11053/">&lt;h1 id=&quot;boj-11053-가장-긴-증가하는-부분수열-lis&quot;&gt;&lt;strong&gt;BOJ 11053. 가장 긴 증가하는 부분수열 (LIS)&lt;/strong&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;가장 긴 증가하는 부분수열(Longest Increasing Subsequece) [&lt;a href=&quot;https://namu.wiki/w/%EC%B5%9C%EC%9E%A5%20%EC%A6%9D%EA%B0%80%20%EB%B6%80%EB%B6%84%20%EC%88%98%EC%97%B4&quot;&gt;나무위키]&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;어떤 임의의 수열이 주어질 때, 이 수열에서 몇 개의 수들을 제거해서 부분수열을 만들 수 있다.&lt;br /&gt;
-이때 만들어진 부분수열 중 오름차순으로 정렬된 가장 긴 수열을 최장 증가 부분 수열이라 한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814873-10c9a8ef-0209-4c24-b66d-e67683511aa4.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;d[i] = a[1], …… a[i] 까지 수열이 있을 때, a[i]를 마지막으로 하는 가장 긴 증가하는 부분수열의 길이&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;예를들어 a[1], a[2], a[3], a[4] …. a[i] 라는 수열이 있을 때 &lt;/p&gt;
-
-&lt;p&gt;a[i]의 바로 전 수는 뭘까?&lt;br /&gt;
-알 수없으므로 변수 j를 둔다.&lt;/p&gt;
-
-&lt;p&gt;a[1], a[2], a[3], a[4] …. , a[j], a[i]&lt;br /&gt;
-j 는 i보다 작고, a[j] &amp;lt; a[i]일때 LIS가 된다.&lt;/p&gt;
-
-&lt;p&gt;점화식
-d[i] = max(d[j]) + 1&lt;br /&gt;
-j&amp;lt; 1 ,  a[i] &amp;gt; a[j]&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.io.IOException;
-import java.util.Scanner;
-
-class Main {
-    public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int[] arr = new int[n];
-        int[] d = new int[n];
-        int max = -1;
-
-        for (int i = 0; i &amp;lt; n; i++) {
-            arr[i] = sc.nextInt();
-            d[i] = 1;
-            for (int j = 0; j &amp;lt; i; j++) {
-                if (arr[i] &amp;gt; arr[j]) {
-                    d[i] = Math.max(d[i], d[j] + 1);
-                }
-            }
-
-            if (max &amp;lt; d[i]) {
-                max = d[i];
-            }
-        }
-        sc.close();
-        System.out.println(max);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import kotlin.math.max
-
-fun main() {
-    val n = readLine()!!.toInt()
-    val arr = readLine()!!.split(&quot; &quot;).map { it.toInt() }
-    val d = IntArray(n) { 1 }
-
-    for (i in 0 until n) {
-        for (j in 0 until i) {
-            if (arr[i] &amp;gt; arr[j]) {
-                d[i] = max(d[i], d[j] + 1)
-            }
-        }
-    }
-
-    println(d.maxOf { it })
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/commit/0b4f0b0e945e335949409e9b9968b802733704bf&quot;&gt;github.com/beomjo/algorithm-study/commit/0b4f0b0e945e335949409e9b9968b802733704bf&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 11053. 가장 긴 증가하는 부분수열 (LIS) 가장 긴 증가하는 부분수열(Longest Increasing Subsequece) [나무위키] 어떤 임의의 수열이 주어질 때, 이 수열에서 몇 개의 수들을 제거해서 부분수열을 만들 수 있다. 이때 만들어진 부분수열 중 오름차순으로 정렬된 가장 긴 수열을 최장 증가 부분 수열이라 한다.</summary></entry><entry><title type="html">BOJ 2193. 이친수</title><link href="/boj/boj-2193/" rel="alternate" type="text/html" title="BOJ 2193. 이친수" /><published>2021-03-05T00:00:00+09:00</published><updated>2021-03-05T00:00:00+09:00</updated><id>/boj/boj-2193</id><content type="html" xml:base="/boj/boj-2193/">&lt;h1 id=&quot;boj2193이친수&quot;&gt;&lt;strong&gt;BOJ 2193.  이친수&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/commit/2927f0207bb85c7dce70681a1aecef2d41903a2d&quot;&gt;github.com/beomjo/algorithm-study/commit/2927f0207bb85c7dce70681a1aecef2d41903a2d&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 14002. 가장 긴 증가하는 부분수열 4 (LIS)</summary></entry><entry><title type="html">BOJ 2193. 이친수</title><link href="/boj/boj-2193/" rel="alternate" type="text/html" title="BOJ 2193. 이친수" /><published>2021-03-05T00:00:00+09:00</published><updated>2021-03-05T00:00:00+09:00</updated><id>/boj/boj-2193</id><content type="html" xml:base="/boj/boj-2193/">&lt;h1 id=&quot;boj2193이친수&quot;&gt;&lt;strong&gt;BOJ 2193.  이친수&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814808-0d28d75a-fbe5-4a95-8439-d4e5e41cf9fa.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
@@ -487,7 +472,79 @@ fun go(i: Int, j: Int): Long {
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/commit/221467a4207833969f3527a5586429820482d6d9&quot;&gt;github.com/beomjo/algorithm-study/commit/221467a4207833969f3527a5586429820482d6d9&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 2193.  이친수</summary></entry><entry><title type="html">BOJ 10844. 쉬운 계단 수</title><link href="/boj/boj-10844/" rel="alternate" type="text/html" title="BOJ 10844. 쉬운 계단 수" /><published>2021-03-04T00:00:00+09:00</published><updated>2021-03-04T00:00:00+09:00</updated><id>/boj/boj-10844</id><content type="html" xml:base="/boj/boj-10844/">&lt;h1 id=&quot;boj10844쉬운계단수&quot;&gt;&lt;strong&gt;BOJ 10844. 쉬운 계단 수&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/commit/221467a4207833969f3527a5586429820482d6d9&quot;&gt;github.com/beomjo/algorithm-study/commit/221467a4207833969f3527a5586429820482d6d9&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 2193.  이친수</summary></entry><entry><title type="html">BOJ 11053. 가장 긴 증가하는 부분수열 (LIS)</title><link href="/boj/boj-11053/" rel="alternate" type="text/html" title="BOJ 11053. 가장 긴 증가하는 부분수열 (LIS)" /><published>2021-03-05T00:00:00+09:00</published><updated>2021-03-05T00:00:00+09:00</updated><id>/boj/boj-11053</id><content type="html" xml:base="/boj/boj-11053/">&lt;h1 id=&quot;boj-11053-가장-긴-증가하는-부분수열-lis&quot;&gt;&lt;strong&gt;BOJ 11053. 가장 긴 증가하는 부분수열 (LIS)&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;가장 긴 증가하는 부분수열(Longest Increasing Subsequece) [&lt;a href=&quot;https://namu.wiki/w/%EC%B5%9C%EC%9E%A5%20%EC%A6%9D%EA%B0%80%20%EB%B6%80%EB%B6%84%20%EC%88%98%EC%97%B4&quot;&gt;나무위키]&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;어떤 임의의 수열이 주어질 때, 이 수열에서 몇 개의 수들을 제거해서 부분수열을 만들 수 있다.&lt;br /&gt;
+이때 만들어진 부분수열 중 오름차순으로 정렬된 가장 긴 수열을 최장 증가 부분 수열이라 한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814873-10c9a8ef-0209-4c24-b66d-e67683511aa4.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;d[i] = a[1], …… a[i] 까지 수열이 있을 때, a[i]를 마지막으로 하는 가장 긴 증가하는 부분수열의 길이&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;예를들어 a[1], a[2], a[3], a[4] …. a[i] 라는 수열이 있을 때 &lt;/p&gt;
+
+&lt;p&gt;a[i]의 바로 전 수는 뭘까?&lt;br /&gt;
+알 수없으므로 변수 j를 둔다.&lt;/p&gt;
+
+&lt;p&gt;a[1], a[2], a[3], a[4] …. , a[j], a[i]&lt;br /&gt;
+j 는 i보다 작고, a[j] &amp;lt; a[i]일때 LIS가 된다.&lt;/p&gt;
+
+&lt;p&gt;점화식
+d[i] = max(d[j]) + 1&lt;br /&gt;
+j&amp;lt; 1 ,  a[i] &amp;gt; a[j]&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.io.IOException;
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        int[] d = new int[n];
+        int max = -1;
+
+        for (int i = 0; i &amp;lt; n; i++) {
+            arr[i] = sc.nextInt();
+            d[i] = 1;
+            for (int j = 0; j &amp;lt; i; j++) {
+                if (arr[i] &amp;gt; arr[j]) {
+                    d[i] = Math.max(d[i], d[j] + 1);
+                }
+            }
+
+            if (max &amp;lt; d[i]) {
+                max = d[i];
+            }
+        }
+        sc.close();
+        System.out.println(max);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import kotlin.math.max
+
+fun main() {
+    val n = readLine()!!.toInt()
+    val arr = readLine()!!.split(&quot; &quot;).map { it.toInt() }
+    val d = IntArray(n) { 1 }
+
+    for (i in 0 until n) {
+        for (j in 0 until i) {
+            if (arr[i] &amp;gt; arr[j]) {
+                d[i] = max(d[i], d[j] + 1)
+            }
+        }
+    }
+
+    println(d.maxOf { it })
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/commit/0b4f0b0e945e335949409e9b9968b802733704bf&quot;&gt;github.com/beomjo/algorithm-study/commit/0b4f0b0e945e335949409e9b9968b802733704bf&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 11053. 가장 긴 증가하는 부분수열 (LIS) 가장 긴 증가하는 부분수열(Longest Increasing Subsequece) [나무위키] 어떤 임의의 수열이 주어질 때, 이 수열에서 몇 개의 수들을 제거해서 부분수열을 만들 수 있다. 이때 만들어진 부분수열 중 오름차순으로 정렬된 가장 긴 수열을 최장 증가 부분 수열이라 한다.</summary></entry><entry><title type="html">BOJ 10844. 쉬운 계단 수</title><link href="/boj/boj-10844/" rel="alternate" type="text/html" title="BOJ 10844. 쉬운 계단 수" /><published>2021-03-04T00:00:00+09:00</published><updated>2021-03-04T00:00:00+09:00</updated><id>/boj/boj-10844</id><content type="html" xml:base="/boj/boj-10844/">&lt;h1 id=&quot;boj10844쉬운계단수&quot;&gt;&lt;strong&gt;BOJ 10844. 쉬운 계단 수&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814761-6e21576b-d7d6-414a-9f6d-e32cece99e28.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
@@ -912,123 +969,4 @@ fun go(i: Int): Int {
 
 &lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/2c55da78e6c32999db1d586ac95660b8774e4653/BOJ/java/16194.java&quot;&gt;github.com/beomjo/algorithm-study/blob/2c55da78e6c32999db1d586ac95660b8774e4653/BOJ/java/16194.java&lt;/a&gt;
-[github.com/beomjo/algorithm-study/blob/2c55da78e6/BOJ/kotlin/16194.kt](https://github.com/beomjo/algorithm-study/blob/2c55da78e6/BOJ/kotlin/16194.kt&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 16194. 카드 구매하기 2</summary></entry><entry><title type="html">BOJ 11052. 카드 구매하기</title><link href="/boj/boj-11052/" rel="alternate" type="text/html" title="BOJ 11052. 카드 구매하기" /><published>2021-02-23T00:00:00+09:00</published><updated>2021-02-23T00:00:00+09:00</updated><id>/boj/boj-11052</id><content type="html" xml:base="/boj/boj-11052/">&lt;h1 id=&quot;boj11052카드구매하기&quot;&gt;&lt;strong&gt;BOJ 11052. 카드 구매하기&lt;/strong&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814383-623c5380-f664-4f53-b951-87b88dbe84dd.png&quot; alt=&quot;image&quot; /&gt;
-&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814440-ea126d10-202d-4fcb-893a-312b4785f89c.png&quot; alt=&quot;image&quot; /&gt;
-&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814385-41498557-c2ba-4081-b022-941a8ee8885b.png&quot; alt=&quot;image&quot; /&gt;
-&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814462-c4cc5ae4-7dd4-44f2-8bc1-5b3f00657ca4.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;d[n] = N개의 카드를 갖기 위해 지불해야 하는 금액의 최댓값.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;카드 1개를 p[1]에 구매 -&amp;gt; 남은 카드의 수 i-1 -&amp;gt; p[1] + d[i-1]&lt;br /&gt;
-카드 2개를 p[2]에 구매 -&amp;gt; 남은 카드의 수 i-2 -&amp;gt; p[2] + d[i-2]&lt;br /&gt;
-카드 3개를 p[3]에 구매 -&amp;gt; 남은 카드의 수 i-3 -&amp;gt; p[3] + d[i-3]&lt;br /&gt;
-..&lt;br /&gt;
-..&lt;br /&gt;
-카드 N개를 p[N]에 구매 -&amp;gt; 남은 카드의 수 i-N -&amp;gt; p[N] + d[i-N] &lt;/p&gt;
-
-&lt;p&gt;이므로 범위는 1&amp;lt;= j = i 라는 범위가 성립한다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;점화식&lt;br /&gt;
-d[i] = max( d[i-1] + p[1] , d[i-2]+p[2] ……… )&lt;br /&gt;
-d[i] = max(p[j] + d[i-j])  , ( 1 &amp;lt;= j &amp;lt;= i )&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;bottom-up&quot;&gt;&lt;strong&gt;Bottom-Up&lt;/strong&gt;&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.util.Scanner;
-
-class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-
-        int[] d = new int[n + 1];
-        int[] p = new int[n + 1];
-
-        for (int i = 1; i &amp;lt;= n; i++) {
-            p[i] = sc.nextInt();
-        }
-
-        for (int i = 1; i &amp;lt;= n; i++) {
-            for (int j = 1; j &amp;lt;= i; j++) {
-                d[i] = Math.max(d[i], d[i - j] + p[j]);
-            }
-        }
-        System.out.println(d[n]);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun main() {
-    val n = readLine()!!.toInt()
-    val d = IntArray(n + 1) { 0 }
-    val p = &quot;0 ${readLine()!!}&quot;.split(&quot; &quot;).map { it.toInt() }
-    for (i in 1..n)
-        for (j in 1..i) d[i] = max(d[i], d[i - j] + p[j])
-    println(d[n])
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;top-down&quot;&gt;&lt;strong&gt;Top-Down&lt;/strong&gt;&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.util.Scanner;
-
-class Main {
-    static int[] d = new int[1001];
-    static int[] p = new int[1001];
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-
-        for (int i = 1; i &amp;lt;= n; i++) {
-            p[i] = sc.nextInt();
-        }
-
-        System.out.println(go(n));
-    }
-
-    static int go(int i) {
-        if (i == 0) return 0;
-        if (d[i] &amp;gt; 0) return d[i];
-
-        for (int j = 1; j &amp;lt;= i; j++) {
-            d[i] = Math.max(d[i], go(i - j) + p[j]);
-        }
-        return d[i];
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.lang.Math.max
-import java.util.*
-
-val d = IntArray(1001) { 0 }
-val p = IntArray(1001) { 0 }
-
-fun main() {
-    val sc = Scanner(System.`in`)
-    val n = sc.nextInt()
-    for (i in 1..n) p[i] = sc.nextInt()
-    println(go(n))
-}
-
-fun go(i: Int): Int {
-    if (i == 0) return 0
-    if (d[i] &amp;gt; 0) return d[i]
-    for (j in 1..i) d[i] = max(d[i], go(i - j) + p[j])
-    return d[i];
-}
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;시간 복잡도&lt;/strong&gt;
-1 장부터 n장까지 반복 = O(n)&lt;br /&gt;
-각 i장의 최댓값 반복 = O(n)&lt;/p&gt;
-
-&lt;p&gt;O(n) + O(n) = O(n^2) &lt;/p&gt;
-
-&lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/48b8a2e9c77282ea27e84f102da90fda3299258a/BOJ/java/11052.java&quot;&gt;github.com/beomjo/algorithm-study/blob/48b8a2e9c77282ea27e84f102da90fda3299258a/BOJ/java/11052.java&lt;/a&gt;
-&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/48b8a2e9c7/BOJ/kotlin/11052.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/48b8a2e9c7/BOJ/kotlin/11052.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 11052. 카드 구매하기</summary></entry></feed>
+[github.com/beomjo/algorithm-study/blob/2c55da78e6/BOJ/kotlin/16194.kt](https://github.com/beomjo/algorithm-study/blob/2c55da78e6/BOJ/kotlin/16194.kt&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 16194. 카드 구매하기 2</summary></entry></feed>

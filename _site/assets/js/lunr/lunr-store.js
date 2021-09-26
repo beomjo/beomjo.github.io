@@ -167,6 +167,12 @@ var store = [{
         "url": "/boj/boj-1912/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 1476. 날짜계산",
+        "excerpt":"BOJ 1476. 날짜 계산 풀이 (1 &lt;= E &lt;= 15) , (1 &lt;= S &lt;=28), (1 &lt;= M &lt;=19) 이므로 경우의 수는 15 * 28 * 19 = 7980으로  1초 안에 수행할 수 있는 수 1억에 한참 못 미치는 숫자로, 여유 있게 구할 수 있으니 모든 경우의 수를 대입해 본다. 경우의 수...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-1476/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "Jekyll, minimal-mistakes 테마를 적용하기",
         "excerpt":"설정 Github Pages 호스팅을 위해 ${GITHUB_ID}.github.io 라는 이름으로 리파지토리를 생성해야 한다 Gem을 이용해서 Jekyll 을 설치한다 테마 적용 minimal-mistake 빠른 시작 가이드를 참고하여 진행한다. minimal-mistake Repository에서 소스를 가져와 옮긴다. 옮긴 후 다음 과정을 진행한다. 불필요 내용 제거 minimal-mistakes-jekyll repository에서 소스를 가져왔다면 불필요한 내용을 제거한다. .editorconfig .gitattributes .github /docs /test CHANGELOG.md...","categories": ["Blogs"],
         "tags": ["Jekyll","minimal-mistakes"],

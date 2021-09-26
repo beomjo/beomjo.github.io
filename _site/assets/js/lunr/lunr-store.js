@@ -95,6 +95,12 @@ var store = [{
         "url": "/boj/boj-9613/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 11726. 2xn 타일링",
+        "excerpt":"BOJ 11726. 2xn 타일링 풀이 d[n] = 2*n 크기의 직사각형을 채우는 방법의 수 앞부분들은 겹치는 부분들로 memo 해놓고 계속 사용하게 되니 점화식 d[n] = d[n-1] + d[n-2] 또한 d가 1일 때 방법은 1개이므로, d[1] = 1 d가 2일 때 방법은 1개이므로, d[2] = 2 Bottom-Up import java.util.Scanner; class Main { public static void...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-11726/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "BOJ 1463. 1로만들기",
         "excerpt":"BOJ 1463. 1로 만들기 풀이 d[n]= 1로 만드는 연산을 하는 최솟값 점화식 d[n] = min(d[n-1] +1 , d[n2] + 1, d[n3] + 1 )  대략적인 논리로, 그대로 쓰지는 않고 2나 3으로 나누어 떨어지는지 확인 조건문으로 처리 필요 Bottom-Up 입력이 1일때는 어떠한 연산도 할 필요가 없으므로 d[1]에 0을 넣어 시작한다. import java.io.*; import java.util.Scanner;...","categories": ["BOJ"],
         "tags": ["Algorithm","BOJ"],

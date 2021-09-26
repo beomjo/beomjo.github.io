@@ -65,6 +65,12 @@ var store = [{
         "url": "/boj/boj-2609/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 6588. 골드바흐의 추측",
+        "excerpt":"BOJ 6588. 골드바흐의 추측 풀이 골드바흐의 추측 4보다 큰 모든 짝수는 두 홀수 소수의 합으로 나타낼 수 있다. 먼저 소수를 찾아야 하므로 에라 토스트 테네스의 체 알고리즘을 활용하여 범위 내의 모든 소수를 찾는다. 그리고 !check[a] &amp;&amp; !check[b] 조건을 만족하는 a와 b를 찾는다. Java import java.util.Scanner; class Main { public static void main(String[] args) {...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-6588/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "Jekyll, minimal-mistakes 테마를 적용하기",
         "excerpt":"설정 Github Pages 호스팅을 위해 ${GITHUB_ID}.github.io 라는 이름으로 리파지토리를 생성해야 한다 Gem을 이용해서 Jekyll 을 설치한다 테마 적용 minimal-mistake 빠른 시작 가이드를 참고하여 진행한다. minimal-mistake Repository에서 소스를 가져와 옮긴다. 옮긴 후 다음 과정을 진행한다. 불필요 내용 제거 minimal-mistakes-jekyll repository에서 소스를 가져왔다면 불필요한 내용을 제거한다. .editorconfig .gitattributes .github /docs /test CHANGELOG.md...","categories": ["Blogs"],
         "tags": ["Jekyll","minimal-mistakes"],

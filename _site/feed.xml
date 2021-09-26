@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-09-27T00:03:35+09:00</updated><id>/feed.xml</id><title type="html">Beom Log</title><subtitle>beomjo amazing website.</subtitle><author><name>beomjo</name></author><entry><title type="html">Jekyll, minimal-mistakes 테마를 적용하기</title><link href="/blogs/create-blog/" rel="alternate" type="text/html" title="Jekyll, minimal-mistakes 테마를 적용하기" /><published>2021-06-29T00:00:00+09:00</published><updated>2021-06-29T00:00:00+09:00</updated><id>/blogs/create-blog</id><content type="html" xml:base="/blogs/create-blog/">&lt;h2 id=&quot;설정&quot;&gt;설정&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-09-27T00:07:14+09:00</updated><id>/feed.xml</id><title type="html">Beom Log</title><subtitle>beomjo amazing website.</subtitle><author><name>beomjo</name></author><entry><title type="html">Jekyll, minimal-mistakes 테마를 적용하기</title><link href="/blogs/create-blog/" rel="alternate" type="text/html" title="Jekyll, minimal-mistakes 테마를 적용하기" /><published>2021-06-29T00:00:00+09:00</published><updated>2021-06-29T00:00:00+09:00</updated><id>/blogs/create-blog</id><content type="html" xml:base="/blogs/create-blog/">&lt;h2 id=&quot;설정&quot;&gt;설정&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Github Pages 호스팅을 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;${GITHUB_ID}.github.io&lt;/code&gt; 라는 이름으로 리파지토리를 생성해야 한다&lt;/li&gt;
   &lt;li&gt;Gem을 이용해서 Jekyll 을 설치한다&lt;/li&gt;
@@ -113,73 +113,7 @@ tags:
   - minimal-mistakes
 toc: true
 ---
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>beomjo</name></author><category term="Blogs" /><category term="Jekyll" /><category term="minimal-mistakes" /><summary type="html">설정 Github Pages 호스팅을 위해 ${GITHUB_ID}.github.io 라는 이름으로 리파지토리를 생성해야 한다 Gem을 이용해서 Jekyll 을 설치한다</summary></entry><entry><title type="html">BOJ 17413. 단어뒤집기2</title><link href="/boj/boj-17413/" rel="alternate" type="text/html" title="BOJ 17413. 단어뒤집기2" /><published>2021-02-09T00:00:00+09:00</published><updated>2021-02-09T00:00:00+09:00</updated><id>/boj/boj-17413</id><content type="html" xml:base="/boj/boj-17413/">&lt;h1 id=&quot;boj17413단어-뒤집기2&quot;&gt;BOJ 17413. 단어 뒤집기 2&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134812224-e189983e-5a20-4766-a018-227e0c30d71b.png&quot; alt=&quot;image&quot; /&gt;
-&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134812240-6d43f5dd-f321-4178-968f-38542879a2ed.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;단어를 뒤집는 방법은 Stack에 순서대로 push 하고 다시 pop 하여 단어를 뒤집는다.&lt;br /&gt;
-태그 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;&lt;/code&gt; or&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;' '&lt;/code&gt;or&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;'\n'&lt;/code&gt;를 만나면 만나면 이전까지 Stack에 쌓아놓은 단어들을 모두 pop 한다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.io.*;
-import java.util.Stack;
-
-class Main {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        String input = br.readLine() + &quot;\n&quot;;
-
-        Stack&amp;lt;Character&amp;gt; stack = new Stack&amp;lt;&amp;gt;();
-
-        boolean isTag = false;
-
-        for (int i = 0; i &amp;lt; input.length(); i++) {
-            char c = input.charAt(i);
-
-            if (c == '&amp;lt;') isTag = true;
-            if (isTag || c == ' ' || c == '\n') {
-                while (!stack.isEmpty()) {
-                    bw.write(stack.pop());
-                }
-                if (c != '\n') bw.write(c);
-            } else {
-                stack.push(c);
-            }
-            if (c == '&amp;gt;') isTag = false;
-        }
-        bw.flush();
-        return;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.lang.StringBuilder
-import java.util.*
-
-fun main() {
-    val stack = Stack&amp;lt;Char&amp;gt;()
-    val sb = StringBuilder()
-    var isTag = false
-    &quot;${readLine()!!}\n&quot;.forEach { c -&amp;gt;
-        if (c == '&amp;lt;') isTag = true
-        if (isTag || c == ' ' || c == '\n') {
-            while (!stack.isEmpty()) {
-                sb.append(stack.pop())
-            }
-            if (c != '\n') sb.append(c)
-        } else {
-            stack.push(c);
-        }
-        if (c == '&amp;gt;') isTag = false
-    }
-    print(sb)
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/java/17413.java&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/java/17413.java&lt;/a&gt;
-&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/17413.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/17413.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 17413. 단어 뒤집기 2</summary></entry><entry><title type="html">BOJ 1929. 소수구하기</title><link href="/boj/boj-1929/" rel="alternate" type="text/html" title="BOJ 1929. 소수구하기" /><published>2021-02-09T00:00:00+09:00</published><updated>2021-02-09T00:00:00+09:00</updated><id>/boj/boj-1929</id><content type="html" xml:base="/boj/boj-1929/">&lt;h1 id=&quot;boj1929소수구하기&quot;&gt;&lt;strong&gt;BOJ 1929. 소수 구하기&lt;/strong&gt;&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>beomjo</name></author><category term="Blogs" /><category term="Jekyll" /><category term="minimal-mistakes" /><summary type="html">설정 Github Pages 호스팅을 위해 ${GITHUB_ID}.github.io 라는 이름으로 리파지토리를 생성해야 한다 Gem을 이용해서 Jekyll 을 설치한다</summary></entry><entry><title type="html">BOJ 1929. 소수구하기</title><link href="/boj/boj-1929/" rel="alternate" type="text/html" title="BOJ 1929. 소수구하기" /><published>2021-02-09T00:00:00+09:00</published><updated>2021-02-09T00:00:00+09:00</updated><id>/boj/boj-1929</id><content type="html" xml:base="/boj/boj-1929/">&lt;h1 id=&quot;boj1929소수구하기&quot;&gt;&lt;strong&gt;BOJ 1929. 소수 구하기&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134813162-252e758f-b2dd-4982-b0b1-ab281e52bca8.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
@@ -476,87 +410,97 @@ fun main() {
 
 &lt;h2 id=&quot;소스풀이&quot;&gt;소스풀이&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/java/2609.java&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/java/2609.java&lt;/a&gt;
-&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/2609.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/2609.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 2609. 최대공약수와 최소공배수</summary></entry><entry><title type="html">BOJ 10799. 쇠막대기</title><link href="/boj/boj-10799/" rel="alternate" type="text/html" title="BOJ 10799. 쇠막대기" /><published>2021-02-09T00:00:00+09:00</published><updated>2021-02-09T00:00:00+09:00</updated><id>/boj/boj-10799</id><content type="html" xml:base="/boj/boj-10799/">&lt;h1 id=&quot;boj10799쇠막대기&quot;&gt;&lt;strong&gt;BOJ 10799. 쇠막대기&lt;/strong&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134812296-3db6e5cc-c4a6-4775-ba5c-eaec9beddac8.png&quot; alt=&quot;image&quot; /&gt;
-&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134812298-86f3d7b1-821c-47e9-86b4-f4386fbf3704.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/2609.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/2609.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 2609. 최대공약수와 최소공배수</summary></entry><entry><title type="html">BOJ 6588. 골드바흐의 추측</title><link href="/boj/boj-6588/" rel="alternate" type="text/html" title="BOJ 6588. 골드바흐의 추측" /><published>2021-02-09T00:00:00+09:00</published><updated>2021-02-09T00:00:00+09:00</updated><id>/boj/boj-6588</id><content type="html" xml:base="/boj/boj-6588/">&lt;h2 id=&quot;boj6588골드바흐의추측&quot;&gt;&lt;strong&gt;BOJ 6588. 골드바흐의 추측&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134813311-5632c92b-3088-4ea6-8b5c-a09157258b86.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134812314-8f1e9fc9-e19d-4fa4-8b16-22e8314607c2.png&quot; alt=&quot;image&quot; /&gt;
-레이저는 인접한 괄호쌍&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;()&lt;/code&gt;로 표현한다.&lt;br /&gt;
-쇠막대기의 왼쪽 끝은 여는 괄호&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(&lt;/code&gt;, 오른쪽 끝은 닫는괄호&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;)&lt;/code&gt;로 표현한다.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;골드바흐의 추측&lt;/strong&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;여는 괄호&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(&lt;/code&gt;를 만났을 때는 Stack에 넣어준다.&lt;/li&gt;
-  &lt;li&gt;닫는 괄호 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;)&lt;/code&gt;를 만났을때
-    &lt;ul&gt;
-      &lt;li&gt;Stack.peak()가 여는괄호&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(&lt;/code&gt;일 경우 Stack.pop() 한 후 남은 Stack의 size가 잘린 쇠막대기의 개수가 된다.&lt;/li&gt;
-      &lt;li&gt;Stack.peak()가 닫는괄호&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;)&lt;/code&gt;일 경우 Stack.pop() 한 후 쇠막대기의 개수를 +1 한다
-        &lt;ul&gt;
-          &lt;li&gt;이때 쇠막대기의 마지막 이므로 이미 왼쪽에 생긴 쇠막대기는 모두 세었으니, 세지 못한 1개만 더한다&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+  &lt;p&gt;4보다 큰 모든 짝수는 두 홀수 소수의 합으로 나타낼 수 있다.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;((()()))&lt;/code&gt;인 경우&lt;/p&gt;
+&lt;p&gt;먼저 소수를 찾아야 하므로&lt;br /&gt;
+&lt;strong&gt;에라 토스트 테네스의 체&lt;/strong&gt; 알고리즘을 활용하여 범위 내의 모든 소수를 찾는다.&lt;br /&gt;
+그리고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;!check[a] &amp;amp;&amp;amp; !check[b]&lt;/code&gt; 조건을 만족하는 a와 b를 찾는다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134812324-5954e5aa-fc5e-4353-ab29-3e7bfa71330d.png&quot; alt=&quot;image&quot; /&gt;
-&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134812325-cc9a508f-f498-403c-9acc-c9e231474c0f.png&quot; alt=&quot;image&quot; /&gt;
-&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134812327-a6c2112f-0aa7-4865-acf2-65a382658d5e.png&quot; alt=&quot;image&quot; /&gt;
-&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134812329-87585b08-e390-4809-8f75-a063ec67f518.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.io.*;
-import java.util.Stack;
+&lt;p&gt;&lt;strong&gt;Java&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.util.Scanner;
 
 class Main {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String input = br.readLine();
-        Stack&amp;lt;Character&amp;gt; stack = new Stack&amp;lt;&amp;gt;();
-        int t = 0;
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i &amp;lt; input.length(); i++) {
-            char c = input.charAt(i);
-            if (c == '(') {
-                stack.push(c);
-            } else {
-                stack.pop();
-                if (input.charAt(i - 1) == '(') {
-                    t += stack.size();
-                } else {
-                    t++;
+        int end = 1000000;
+
+        boolean[] check = new boolean[end + 1];
+        check[1] = true;
+
+        for (int i = 2; i &amp;lt;= end; i++) {
+            for (int j = 2; i * j &amp;lt;= end; j++) {
+                if (!check[i * j]) {
+                    check[i * j] = true;
                 }
             }
         }
 
-        System.out.print(t);
+        while (true) {
+            int n = sc.nextInt();
+            if (n == 0)
+                break;
+            for (int i = 2; i * 2 &amp;lt;= n; i++) {
+                int a = i;
+                int b = n - a;
+                if (!check[a] &amp;amp;&amp;amp; !check[b]) {
+                    sb.append(n + &quot; = &quot; + a + &quot; + &quot; + b + &quot;\n&quot;);
+                    break;
+                }
+            }
+        }
+        System.out.println(sb);
+        sc.close();
     }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.util.*
+&lt;p&gt;&lt;strong&gt;Kotlin&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.lang.StringBuilder
 
 fun main() {
-    val input = readLine()!!
-    val stack = Stack&amp;lt;Char&amp;gt;()
-    var t = 0
-    var before = ' '
-    input.forEach { c -&amp;gt;
-        if (c == '(') stack.push(c)
-        else {
-            stack.pop()
-            t += if (before == '(') stack.size else 1
+    val sb = StringBuilder()
+    val end = 1000001
+    val check = BooleanArray(end + 1) { false }
+    for (i in 2..end) {
+        if (!check[i]) {
+            var j = 2
+            while (i * j &amp;lt;= end) {
+                check[i * j] = true
+                j++
+            }
         }
-        before = c
     }
-    println(t)
+
+    while (true) {
+        val n = readLine()!!.toInt()
+        if (n == 0) break
+        for (i in 2..n / 2) {
+            val a = i
+            val b = n - a
+            if (!check[a] &amp;amp;&amp;amp; !check[b]) {
+                sb.append(&quot;$n = $a + $b\n&quot;)
+                break
+            }
+        }
+    }
+    println(sb)
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/java/10799.java&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/java/10799.java&lt;/a&gt;
-&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/10799.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/10799.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 10799. 쇠막대기</summary></entry><entry><title type="html">BOJ 17289. 오큰수</title><link href="/boj/boj-17289/" rel="alternate" type="text/html" title="BOJ 17289. 오큰수" /><published>2021-02-09T00:00:00+09:00</published><updated>2021-02-09T00:00:00+09:00</updated><id>/boj/boj-17289</id><content type="html" xml:base="/boj/boj-17289/">&lt;h1 id=&quot;boj17298오큰수&quot;&gt;&lt;strong&gt;BOJ 17298. 오큰수&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/java/6588.java&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/java/6588.java&lt;/a&gt;
+&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/6588.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/6588.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 6588. 골드바흐의 추측</summary></entry><entry><title type="html">BOJ 17289. 오큰수</title><link href="/boj/boj-17289/" rel="alternate" type="text/html" title="BOJ 17289. 오큰수" /><published>2021-02-09T00:00:00+09:00</published><updated>2021-02-09T00:00:00+09:00</updated><id>/boj/boj-17289</id><content type="html" xml:base="/boj/boj-17289/">&lt;h1 id=&quot;boj17298오큰수&quot;&gt;&lt;strong&gt;BOJ 17298. 오큰수&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134812387-43552558-a687-4f46-b552-556fe944b3b0.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
@@ -660,7 +604,153 @@ data class NGE(
 
 &lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/java/17298.java&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/java/17298.java&lt;/a&gt;
-&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/17298.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/17298.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 17298. 오큰수</summary></entry><entry><title type="html">BOJ 1157. 요세푸스 문제</title><link href="/boj/boj-1158/" rel="alternate" type="text/html" title="BOJ 1157. 요세푸스 문제" /><published>2021-02-01T00:00:00+09:00</published><updated>2021-02-01T00:00:00+09:00</updated><id>/boj/boj-1158</id><content type="html" xml:base="/boj/boj-1158/">&lt;h1 id=&quot;boj1158요세푸스문제&quot;&gt;&lt;strong&gt;BOJ 1158. 요세푸스 문제&lt;/strong&gt;&lt;/h1&gt;
+&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/17298.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/17298.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 17298. 오큰수</summary></entry><entry><title type="html">BOJ 10799. 쇠막대기</title><link href="/boj/boj-10799/" rel="alternate" type="text/html" title="BOJ 10799. 쇠막대기" /><published>2021-02-09T00:00:00+09:00</published><updated>2021-02-09T00:00:00+09:00</updated><id>/boj/boj-10799</id><content type="html" xml:base="/boj/boj-10799/">&lt;h1 id=&quot;boj10799쇠막대기&quot;&gt;&lt;strong&gt;BOJ 10799. 쇠막대기&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134812296-3db6e5cc-c4a6-4775-ba5c-eaec9beddac8.png&quot; alt=&quot;image&quot; /&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134812298-86f3d7b1-821c-47e9-86b4-f4386fbf3704.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134812314-8f1e9fc9-e19d-4fa4-8b16-22e8314607c2.png&quot; alt=&quot;image&quot; /&gt;
+레이저는 인접한 괄호쌍&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;()&lt;/code&gt;로 표현한다.&lt;br /&gt;
+쇠막대기의 왼쪽 끝은 여는 괄호&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(&lt;/code&gt;, 오른쪽 끝은 닫는괄호&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;)&lt;/code&gt;로 표현한다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;여는 괄호&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(&lt;/code&gt;를 만났을 때는 Stack에 넣어준다.&lt;/li&gt;
+  &lt;li&gt;닫는 괄호 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;)&lt;/code&gt;를 만났을때
+    &lt;ul&gt;
+      &lt;li&gt;Stack.peak()가 여는괄호&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(&lt;/code&gt;일 경우 Stack.pop() 한 후 남은 Stack의 size가 잘린 쇠막대기의 개수가 된다.&lt;/li&gt;
+      &lt;li&gt;Stack.peak()가 닫는괄호&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;)&lt;/code&gt;일 경우 Stack.pop() 한 후 쇠막대기의 개수를 +1 한다
+        &lt;ul&gt;
+          &lt;li&gt;이때 쇠막대기의 마지막 이므로 이미 왼쪽에 생긴 쇠막대기는 모두 세었으니, 세지 못한 1개만 더한다&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;((()()))&lt;/code&gt;인 경우&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134812324-5954e5aa-fc5e-4353-ab29-3e7bfa71330d.png&quot; alt=&quot;image&quot; /&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134812325-cc9a508f-f498-403c-9acc-c9e231474c0f.png&quot; alt=&quot;image&quot; /&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134812327-a6c2112f-0aa7-4865-acf2-65a382658d5e.png&quot; alt=&quot;image&quot; /&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134812329-87585b08-e390-4809-8f75-a063ec67f518.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.io.*;
+import java.util.Stack;
+
+class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String input = br.readLine();
+        Stack&amp;lt;Character&amp;gt; stack = new Stack&amp;lt;&amp;gt;();
+        int t = 0;
+
+        for (int i = 0; i &amp;lt; input.length(); i++) {
+            char c = input.charAt(i);
+            if (c == '(') {
+                stack.push(c);
+            } else {
+                stack.pop();
+                if (input.charAt(i - 1) == '(') {
+                    t += stack.size();
+                } else {
+                    t++;
+                }
+            }
+        }
+
+        System.out.print(t);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.util.*
+
+fun main() {
+    val input = readLine()!!
+    val stack = Stack&amp;lt;Char&amp;gt;()
+    var t = 0
+    var before = ' '
+    input.forEach { c -&amp;gt;
+        if (c == '(') stack.push(c)
+        else {
+            stack.pop()
+            t += if (before == '(') stack.size else 1
+        }
+        before = c
+    }
+    println(t)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/java/10799.java&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/java/10799.java&lt;/a&gt;
+&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/10799.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/10799.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 10799. 쇠막대기</summary></entry><entry><title type="html">BOJ 17413. 단어뒤집기2</title><link href="/boj/boj-17413/" rel="alternate" type="text/html" title="BOJ 17413. 단어뒤집기2" /><published>2021-02-09T00:00:00+09:00</published><updated>2021-02-09T00:00:00+09:00</updated><id>/boj/boj-17413</id><content type="html" xml:base="/boj/boj-17413/">&lt;h1 id=&quot;boj17413단어-뒤집기2&quot;&gt;BOJ 17413. 단어 뒤집기 2&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134812224-e189983e-5a20-4766-a018-227e0c30d71b.png&quot; alt=&quot;image&quot; /&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134812240-6d43f5dd-f321-4178-968f-38542879a2ed.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;단어를 뒤집는 방법은 Stack에 순서대로 push 하고 다시 pop 하여 단어를 뒤집는다.&lt;br /&gt;
+태그 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;&lt;/code&gt; or&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;' '&lt;/code&gt;or&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;'\n'&lt;/code&gt;를 만나면 만나면 이전까지 Stack에 쌓아놓은 단어들을 모두 pop 한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.io.*;
+import java.util.Stack;
+
+class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        String input = br.readLine() + &quot;\n&quot;;
+
+        Stack&amp;lt;Character&amp;gt; stack = new Stack&amp;lt;&amp;gt;();
+
+        boolean isTag = false;
+
+        for (int i = 0; i &amp;lt; input.length(); i++) {
+            char c = input.charAt(i);
+
+            if (c == '&amp;lt;') isTag = true;
+            if (isTag || c == ' ' || c == '\n') {
+                while (!stack.isEmpty()) {
+                    bw.write(stack.pop());
+                }
+                if (c != '\n') bw.write(c);
+            } else {
+                stack.push(c);
+            }
+            if (c == '&amp;gt;') isTag = false;
+        }
+        bw.flush();
+        return;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.lang.StringBuilder
+import java.util.*
+
+fun main() {
+    val stack = Stack&amp;lt;Char&amp;gt;()
+    val sb = StringBuilder()
+    var isTag = false
+    &quot;${readLine()!!}\n&quot;.forEach { c -&amp;gt;
+        if (c == '&amp;lt;') isTag = true
+        if (isTag || c == ' ' || c == '\n') {
+            while (!stack.isEmpty()) {
+                sb.append(stack.pop())
+            }
+            if (c != '\n') sb.append(c)
+        } else {
+            stack.push(c);
+        }
+        if (c == '&amp;gt;') isTag = false
+    }
+    print(sb)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/java/17413.java&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/java/17413.java&lt;/a&gt;
+&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/17413.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/17413.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 17413. 단어 뒤집기 2</summary></entry><entry><title type="html">BOJ 1157. 요세푸스 문제</title><link href="/boj/boj-1158/" rel="alternate" type="text/html" title="BOJ 1157. 요세푸스 문제" /><published>2021-02-01T00:00:00+09:00</published><updated>2021-02-01T00:00:00+09:00</updated><id>/boj/boj-1158</id><content type="html" xml:base="/boj/boj-1158/">&lt;h1 id=&quot;boj1158요세푸스문제&quot;&gt;&lt;strong&gt;BOJ 1158. 요세푸스 문제&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134812080-9c92b5e8-fa3d-41a3-baaf-6d782267000c.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
@@ -843,86 +933,4 @@ class Main {
 
 &lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/java/1406.java&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/java/1406.java&lt;/a&gt;
-&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/1406.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/1406.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 1406. 에디터</summary></entry><entry><title type="html">BOJ 1874. 스택수열</title><link href="/boj/boj-1874/" rel="alternate" type="text/html" title="BOJ 1874. 스택수열" /><published>2021-02-01T00:00:00+09:00</published><updated>2021-02-01T00:00:00+09:00</updated><id>/boj/boj-1874</id><content type="html" xml:base="/boj/boj-1874/">&lt;h1 id=&quot;boj-1874-스택-수열&quot;&gt;&lt;strong&gt;BOJ 1874. 스택 수열&lt;/strong&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134807944-b729b1d3-f874-4571-b8a6-dcc81ed99389.png&quot; alt=&quot;image&quot; /&gt;
-&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134807958-7dbfe12b-0611-44bd-b9f5-46b40999aaf8.png&quot; alt=&quot;image&quot; /&gt;
-​&lt;/p&gt;
-&lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;입력으로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4 3 6 8 7 5 2 1&lt;/code&gt;으로 주어졌을 때 &lt;br /&gt;
-먼저 1부터 시작하여 4까지 Stack에 순서대로 push(+)한다.
-&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134807961-a882cbd5-2a36-4408-8569-d91a81d63a66.png&quot; alt=&quot;image&quot; /&gt;&lt;br /&gt;
-​
-입력인 4가 되었을 때 Stack에서 pop(-)&lt;br /&gt;
-또 다음 입력인 3이 되었을 때 Stack에서 pop(-)한다.&lt;br /&gt;
-​&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134807983-9c4f22dc-6bfe-4303-9d50-98fc9f947f55.png&quot; alt=&quot;image&quot; /&gt;&lt;br /&gt;
-​
-다음 입력인 6이 될 때까지 Stack에 다시 push(+)&lt;br /&gt;
-&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134807998-ab2f82e5-ae36-4f1e-8af6-220e1b81a2ac.png&quot; alt=&quot;image&quot; /&gt;
-​
-입력인 6에 도달하였으니 pop(-) &lt;br /&gt;
-&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134808026-83a16014-ac3d-4199-bbc0-74544130df82.png&quot; alt=&quot;image&quot; /&gt;
-​
-위와 같이 반복한다.&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.io.*;
-import java.util.Stack;
-​
-class Main {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
-        Stack&amp;lt;Integer&amp;gt; stack = new Stack&amp;lt;&amp;gt;();
-        int total = Integer.parseInt(br.readLine());
-        int i = 1;
-        while (total-- &amp;gt; 0) {
-            int input = Integer.parseInt(br.readLine());
-            while (i &amp;lt;= input) {
-                stack.push(i);
-                sb.append(&quot;+\n&quot;);
-                i++;
-            }
-​
-            if (stack.peek() == input) {
-                stack.pop();
-                sb.append(&quot;-\n&quot;);
-            } else {
-                System.out.print(&quot;NO&quot;);
-                return;
-            }
-        }
-        System.out.println(sb);
-        br.close();
-        return;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;​&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.lang.StringBuilder
-import java.util.*
-​
-fun main() {
-    val stack = Stack&amp;lt;Int&amp;gt;()
-    val sb = StringBuilder()
-    var i = 1;
-    repeat(readLine()?.toInt() ?: return) {
-        val input = readLine()!!.toInt()
-        while (i &amp;lt;= input) {
-            stack.push(i)
-            sb.append(&quot;+\n&quot;)
-            i++
-        }
-        if (stack.peek() == input) {
-            stack.pop()
-            sb.append(&quot;-\n&quot;)
-        } else {
-            print(&quot;NO&quot;)
-            return
-        }
-    }
-    println(sb)
-    return
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;​&lt;/p&gt;
-&lt;h2 id=&quot;풀이-소스&quot;&gt;풀이 소스&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/java/1874.java&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/java/1874.java&lt;/a&gt;
-&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/1874.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/1874.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 1874. 스택 수열 ​ 풀이 입력으로 4 3 6 8 7 5 2 1으로 주어졌을 때 먼저 1부터 시작하여 4까지 Stack에 순서대로 push(+)한다. ​ 입력인 4가 되었을 때 Stack에서 pop(-) 또 다음 입력인 3이 되었을 때 Stack에서 pop(-)한다. ​ ​ 다음 입력인 6이 될 때까지 Stack에 다시 push(+) ​ 입력인 6에 도달하였으니 pop(-) ​ 위와 같이 반복한다. import java.io.*; import java.util.Stack; ​ class Main { public static void main(String[] args) throws IOException { BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); StringBuilder sb = new StringBuilder(); Stack&amp;lt;Integer&amp;gt; stack = new Stack&amp;lt;&amp;gt;(); int total = Integer.parseInt(br.readLine()); int i = 1; while (total-- &amp;gt; 0) { int input = Integer.parseInt(br.readLine()); while (i &amp;lt;= input) { stack.push(i); sb.append(&quot;+\n&quot;); i++; } ​ if (stack.peek() == input) { stack.pop(); sb.append(&quot;-\n&quot;); } else { System.out.print(&quot;NO&quot;); return; } } System.out.println(sb); br.close(); return; } } ​ import java.lang.StringBuilder import java.util.* ​ fun main() { val stack = Stack&amp;lt;Int&amp;gt;() val sb = StringBuilder() var i = 1; repeat(readLine()?.toInt() ?: return) { val input = readLine()!!.toInt() while (i &amp;lt;= input) { stack.push(i) sb.append(&quot;+\n&quot;) i++ } if (stack.peek() == input) { stack.pop() sb.append(&quot;-\n&quot;) } else { print(&quot;NO&quot;) return } } println(sb) return } ​ 풀이 소스 github.com/beomjo/algorithm-study/blob/main/BOJ/java/1874.java github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/1874.kt</summary></entry></feed>
+&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/1406.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/1406.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 1406. 에디터</summary></entry></feed>

@@ -119,6 +119,12 @@ var store = [{
         "url": "/boj/boj-11052/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 16194. 카드 구매하기 2",
+        "excerpt":"BOJ 16194. 카드 구매하기 2 풀이 d[n] = 카드 N개를 갖기 위한 금액의 최솟값. 카드 1개를 p[1]에 구매 -&gt; 남은 카드의 수 i-1 -&gt; p[1] + d[i-1] 카드 2개를 p[2]에 구매 -&gt; 남은 카드의 수 i-2 -&gt; p[2] + d[i-2] 카드 3개를 p[3]에 구매 -&gt; 남은 카드의 수 i-3 -&gt; p[3] + d[i-3] .....","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-16194/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "Jekyll, minimal-mistakes 테마를 적용하기",
         "excerpt":"설정 Github Pages 호스팅을 위해 ${GITHUB_ID}.github.io 라는 이름으로 리파지토리를 생성해야 한다 Gem을 이용해서 Jekyll 을 설치한다 테마 적용 minimal-mistake 빠른 시작 가이드를 참고하여 진행한다. minimal-mistake Repository에서 소스를 가져와 옮긴다. 옮긴 후 다음 과정을 진행한다. 불필요 내용 제거 minimal-mistakes-jekyll repository에서 소스를 가져왔다면 불필요한 내용을 제거한다. .editorconfig .gitattributes .github /docs /test CHANGELOG.md...","categories": ["Blogs"],
         "tags": ["Jekyll","minimal-mistakes"],

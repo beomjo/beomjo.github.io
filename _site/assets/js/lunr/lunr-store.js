@@ -125,6 +125,12 @@ var store = [{
         "url": "/boj/boj-16194/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 15990. 1, 2, 3 더하기 5",
+        "excerpt":"BOJ 15990. 1, 2, 3 더하기 5 풀이 d[n] =  n을 1, 2, 3으로 나타내는 방법의 수 (두 번 이상 연속 X)  마지막으로 오는 수가 1이면? 그 앞에 올 수 있는 숫자는 2 또는 3이 된다. 마지막으로 오는 수가 2이면? 그 앞에 올 수 있는 숫자는 1 또는 3이 된다. 마지막으로 오는 수가 3이면? 그 앞에 올 수 있는 숫자는 1 또는 2이 된다. 마지막이 1로 끝낫을경우, 2로 끝났을 경우, 3으로 끝났을 경우를 찾아서 2차원 배열에 저장해보자 d[i][j] 1로 끝났을경우 2로 끝났을 경우 3으로 끝낫을 경우 1 1 X X 2 X 1 X 3...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-15990/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "Jekyll, minimal-mistakes 테마를 적용하기",
         "excerpt":"설정 Github Pages 호스팅을 위해 ${GITHUB_ID}.github.io 라는 이름으로 리파지토리를 생성해야 한다 Gem을 이용해서 Jekyll 을 설치한다 테마 적용 minimal-mistake 빠른 시작 가이드를 참고하여 진행한다. minimal-mistake Repository에서 소스를 가져와 옮긴다. 옮긴 후 다음 과정을 진행한다. 불필요 내용 제거 minimal-mistakes-jekyll repository에서 소스를 가져왔다면 불필요한 내용을 제거한다. .editorconfig .gitattributes .github /docs /test CHANGELOG.md...","categories": ["Blogs"],
         "tags": ["Jekyll","minimal-mistakes"],

@@ -47,6 +47,12 @@ var store = [{
         "url": "/boj/boj-17413/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 2609. 최대공약수와 최소공배수",
+        "excerpt":"BOJ 2609. 최대공약수와 최소공배수 풀이 최대 공약수를 구하는 방법 1 int getGCP(int a, int b) { int r = 1; for (int i = 2; i &lt; Math.min(a, b); i++) { if (a % i == 0 &amp;&amp; b % i == 0) { r = i; } } return r; } 2부터 a와...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-2609/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "Jekyll, minimal-mistakes 테마를 적용하기",
         "excerpt":"설정 Github Pages 호스팅을 위해 ${GITHUB_ID}.github.io 라는 이름으로 리파지토리를 생성해야 한다 Gem을 이용해서 Jekyll 을 설치한다 테마 적용 minimal-mistake 빠른 시작 가이드를 참고하여 진행한다. minimal-mistake Repository에서 소스를 가져와 옮긴다. 옮긴 후 다음 과정을 진행한다. 불필요 내용 제거 minimal-mistakes-jekyll repository에서 소스를 가져왔다면 불필요한 내용을 제거한다. .editorconfig .gitattributes .github /docs /test CHANGELOG.md...","categories": ["Blogs"],
         "tags": ["Jekyll","minimal-mistakes"],

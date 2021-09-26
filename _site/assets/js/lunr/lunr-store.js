@@ -155,6 +155,12 @@ var store = [{
         "url": "/boj/boj-14002/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 1699. 제곱수의 합",
+        "excerpt":"BOJ 1699. 제곱수의 합 풀이 d[i] = i을 제곱수의 합으로 나타낼 수 있는 최소 항의 개수 마지막으로 올 수 있는 수들은 11, 22, 33….. jj이다. 즉 , O+O+O+O+…. (j*j) = i 으로 표현된다. (i - jj) + (jj) = i로 표현할 수 있고, 마지막  j*j는 한 가지 방법이므로 +1이다. (i...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-1699/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "BOJ 1912. 연속합",
         "excerpt":"BOJ 1912. 연속합 풀이 d[i] = n개의 정수로 이루어진 임의의 수열 에서 i로 끝나는 연속합(연속된 몇 개의 수를 선택해서 구할 수 있는 값 중 가장 큰 값) 임의의 수열에서 i로 끝나는 경우는 2가지가 있다 1. i-1번째와 i번째가 연속하는 경우 -&gt; d[i-1]+arr[i] 2.i-1번째와 i번째가 연속하지 않는 경우 -&gt; arr[i] 점화식 d[i]...","categories": ["BOJ"],
         "tags": ["Algorithm","BOJ"],

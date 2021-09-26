@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-09-27T00:43:52+09:00</updated><id>/feed.xml</id><title type="html">Beom Log</title><subtitle>beomjo amazing website.</subtitle><author><name>beomjo</name></author><entry><title type="html">Jekyll, minimal-mistakes 테마를 적용하기</title><link href="/blogs/create-blog/" rel="alternate" type="text/html" title="Jekyll, minimal-mistakes 테마를 적용하기" /><published>2021-06-29T00:00:00+09:00</published><updated>2021-06-29T00:00:00+09:00</updated><id>/blogs/create-blog</id><content type="html" xml:base="/blogs/create-blog/">&lt;h2 id=&quot;설정&quot;&gt;설정&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-09-27T00:46:39+09:00</updated><id>/feed.xml</id><title type="html">Beom Log</title><subtitle>beomjo amazing website.</subtitle><author><name>beomjo</name></author><entry><title type="html">Jekyll, minimal-mistakes 테마를 적용하기</title><link href="/blogs/create-blog/" rel="alternate" type="text/html" title="Jekyll, minimal-mistakes 테마를 적용하기" /><published>2021-06-29T00:00:00+09:00</published><updated>2021-06-29T00:00:00+09:00</updated><id>/blogs/create-blog</id><content type="html" xml:base="/blogs/create-blog/">&lt;h2 id=&quot;설정&quot;&gt;설정&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Github Pages 호스팅을 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;${GITHUB_ID}.github.io&lt;/code&gt; 라는 이름으로 리파지토리를 생성해야 한다&lt;/li&gt;
   &lt;li&gt;Gem을 이용해서 Jekyll 을 설치한다&lt;/li&gt;
@@ -113,7 +113,131 @@ tags:
   - minimal-mistakes
 toc: true
 ---
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>beomjo</name></author><category term="Blogs" /><category term="Jekyll" /><category term="minimal-mistakes" /><summary type="html">설정 Github Pages 호스팅을 위해 ${GITHUB_ID}.github.io 라는 이름으로 리파지토리를 생성해야 한다 Gem을 이용해서 Jekyll 을 설치한다</summary></entry><entry><title type="html">BOJ 15990. 1, 2, 3 더하기 5</title><link href="/boj/boj-15990/" rel="alternate" type="text/html" title="BOJ 15990. 1, 2, 3 더하기 5" /><published>2021-03-01T00:00:00+09:00</published><updated>2021-03-01T00:00:00+09:00</updated><id>/boj/boj-15990</id><content type="html" xml:base="/boj/boj-15990/">&lt;h1 id=&quot;boj15990123더하기5&quot;&gt;&lt;strong&gt;BOJ 15990. 1, 2, 3 더하기 5&lt;/strong&gt;&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>beomjo</name></author><category term="Blogs" /><category term="Jekyll" /><category term="minimal-mistakes" /><summary type="html">설정 Github Pages 호스팅을 위해 ${GITHUB_ID}.github.io 라는 이름으로 리파지토리를 생성해야 한다 Gem을 이용해서 Jekyll 을 설치한다</summary></entry><entry><title type="html">BOJ 10844. 쉬운 계단 수</title><link href="/boj/boj-10844/" rel="alternate" type="text/html" title="BOJ 10844. 쉬운 계단 수" /><published>2021-03-04T00:00:00+09:00</published><updated>2021-03-04T00:00:00+09:00</updated><id>/boj/boj-10844</id><content type="html" xml:base="/boj/boj-10844/">&lt;h1 id=&quot;boj10844쉬운계단수&quot;&gt;&lt;strong&gt;BOJ 10844. 쉬운 계단 수&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814761-6e21576b-d7d6-414a-9f6d-e32cece99e28.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;d[i][j] = 길이 i의 마지막숫자가 j인 수의 개수&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;길이 i의 마지막으로 오는수가 j일때 &lt;br /&gt;
+마지막 수 j의 바로 전 수는 j+1 or j-1 일 수밖에 없다 (계단수는 인접한 모든 자릿수의 차이가 1이므로)&lt;br /&gt;
+마지막 수 j로 끝났을 경우를 2차원 배열에 저장한다. &lt;br /&gt;
+j가 0일때는 j+1만 올 수 있고, j가 9 일때는 j-1만 올 수 있음을 주의한다.&lt;/p&gt;
+
+&lt;p&gt;점화식
+d[i][j] = d[i-1][j-1] + d[i-1][j+1] , (1 &amp;lt; j &amp;lt;=9)&lt;/p&gt;
+
+&lt;h3 id=&quot;bottom-up&quot;&gt;&lt;strong&gt;Bottom-Up&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        long[][] d = new long[n + 1][10];
+        long mod = 1_000_000_000L;
+
+        for (int i = 1; i &amp;lt;= 9; i++) d[1][i] = 1;
+        for (int i = 2; i &amp;lt;= n; i++) {
+            for (int j = 0; j &amp;lt;= 9; j++) {
+                if (j == 0) {
+                    d[i][j] = (d[i - 1][j + 1]) % mod;
+                } else if (j == 9) {
+                    d[i][j] = (d[i - 1][j - 1]) % mod;
+                } else {
+                    d[i][j] = (d[i - 1][j - 1] + d[i - 1][j + 1]) % mod;
+                }
+            }
+        }
+
+        long result = 0;
+        for (int i = 0; i &amp;lt;= 9; i++) result += d[n][i];
+        System.out.println(result % mod);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun main() {
+    val n = readLine()!!.toInt()
+    val d = Array(n + 1) { LongArray(10) }
+    val mod = 1_000_000_000L
+
+    for (i in 1..9) d[1][i] = 1
+    for (i in 2..n) {
+        for (j in 0..9) {
+            d[i][j] = when (j) {
+                0 -&amp;gt; (d[i - 1][j + 1]) % mod
+                9 -&amp;gt; (d[i - 1][j - 1]) % mod
+                else -&amp;gt; (d[i - 1][j - 1] + d[i - 1][j + 1]) % mod
+            }
+        }
+    }
+    (0..9).sumOf { d[n][it] }.let { it % mod }.let(::println)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;top-down&quot;&gt;&lt;strong&gt;Top-Down&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.util.Scanner;
+
+class Main {
+    static long[][] d = new long[101][10];
+    static long mod = 1_000_000_000L;
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        for (int j = 1; j &amp;lt;= 9; j++) d[1][j] = 1;
+
+        long result = 0;
+        for (int j = 0; j &amp;lt;= 9; j++) {
+            result += (go(n, j) % mod);
+        }
+
+        System.out.println(result % mod);
+    }
+
+    static long go(int i, int j) {
+        if (d[i][j] &amp;gt; 0 || i == 1) return d[i][j];
+
+        if (j == 0) {
+            d[i][j] = go(i - 1, j + 1) % mod;
+        } else if (j == 9) {
+            d[i][j] = go(i - 1, j - 1) % mod;
+        } else {
+            d[i][j] = (go(i - 1, j - 1) + go(i - 1, j + 1)) % mod;
+        }
+
+        return d[i][j] % mod;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;val d = Array(101) { LongArray(10) }
+const val mod = 1_000_000_000L
+
+fun main() {
+    val n = readLine()!!.toInt()
+    for (i in 1..9) d[1][i] = 1
+
+    ((0..9).sumOf { go(n, it) } % mod).let(::println)
+}
+
+fun go(i: Int, j: Int): Long {
+    if (d[i][j] &amp;gt; 0 || i == 1) return d[i][j]
+
+    d[i][j] = when (j) {
+        0 -&amp;gt; go(i - 1, j + 1) % mod
+        9 -&amp;gt; go(i - 1, j - 1) % mod
+        else -&amp;gt; (go(i - 1, j + 1) + go(i - 1, j - 1)) % mod
+    }
+
+    return d[i][j] % mod
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/commit/7d1b464b3a06ce004cd071dc71af81c1ae751cd4#diff-1012b276a559252e4f3e8248e697ebbf45684020ae6683b2608c4a876d8b6fb8&quot;&gt;github.com/beomjo/algorithm-study/commit/7d1b464b3a06ce004cd071dc71af81c1ae751cd4#diff-1012b276a559252e4f3e8248e697ebbf45684020ae6683b2608c4a876d8b6fb8&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 10844. 쉬운 계단 수</summary></entry><entry><title type="html">BOJ 15990. 1, 2, 3 더하기 5</title><link href="/boj/boj-15990/" rel="alternate" type="text/html" title="BOJ 15990. 1, 2, 3 더하기 5" /><published>2021-03-01T00:00:00+09:00</published><updated>2021-03-01T00:00:00+09:00</updated><id>/boj/boj-15990</id><content type="html" xml:base="/boj/boj-15990/">&lt;h1 id=&quot;boj15990123더하기5&quot;&gt;&lt;strong&gt;BOJ 15990. 1, 2, 3 더하기 5&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814655-b3222955-ea2e-405a-9152-476c0cba4c7f.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
@@ -283,7 +407,126 @@ fun go(i: Int, num: Int): Long {
 
 &lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/java/15990.java&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/java/15990.java&lt;/a&gt;
-&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/15990.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/15990.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 15990. 1, 2, 3 더하기 5</summary></entry><entry><title type="html">BOJ 16194. 카드 구매하기 2</title><link href="/boj/boj-16194/" rel="alternate" type="text/html" title="BOJ 16194. 카드 구매하기 2" /><published>2021-02-23T00:00:00+09:00</published><updated>2021-02-23T00:00:00+09:00</updated><id>/boj/boj-16194</id><content type="html" xml:base="/boj/boj-16194/">&lt;h1 id=&quot;boj16194카드구매하기2&quot;&gt;&lt;strong&gt;BOJ 16194. 카드 구매하기 2&lt;/strong&gt;&lt;/h1&gt;
+&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/15990.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/15990.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 15990. 1, 2, 3 더하기 5</summary></entry><entry><title type="html">BOJ 11052. 카드 구매하기</title><link href="/boj/boj-11052/" rel="alternate" type="text/html" title="BOJ 11052. 카드 구매하기" /><published>2021-02-23T00:00:00+09:00</published><updated>2021-02-23T00:00:00+09:00</updated><id>/boj/boj-11052</id><content type="html" xml:base="/boj/boj-11052/">&lt;h1 id=&quot;boj11052카드구매하기&quot;&gt;&lt;strong&gt;BOJ 11052. 카드 구매하기&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814383-623c5380-f664-4f53-b951-87b88dbe84dd.png&quot; alt=&quot;image&quot; /&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814440-ea126d10-202d-4fcb-893a-312b4785f89c.png&quot; alt=&quot;image&quot; /&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814385-41498557-c2ba-4081-b022-941a8ee8885b.png&quot; alt=&quot;image&quot; /&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814462-c4cc5ae4-7dd4-44f2-8bc1-5b3f00657ca4.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;d[n] = N개의 카드를 갖기 위해 지불해야 하는 금액의 최댓값.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;카드 1개를 p[1]에 구매 -&amp;gt; 남은 카드의 수 i-1 -&amp;gt; p[1] + d[i-1]&lt;br /&gt;
+카드 2개를 p[2]에 구매 -&amp;gt; 남은 카드의 수 i-2 -&amp;gt; p[2] + d[i-2]&lt;br /&gt;
+카드 3개를 p[3]에 구매 -&amp;gt; 남은 카드의 수 i-3 -&amp;gt; p[3] + d[i-3]&lt;br /&gt;
+..&lt;br /&gt;
+..&lt;br /&gt;
+카드 N개를 p[N]에 구매 -&amp;gt; 남은 카드의 수 i-N -&amp;gt; p[N] + d[i-N] &lt;/p&gt;
+
+&lt;p&gt;이므로 범위는 1&amp;lt;= j = i 라는 범위가 성립한다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;점화식&lt;br /&gt;
+d[i] = max( d[i-1] + p[1] , d[i-2]+p[2] ……… )&lt;br /&gt;
+d[i] = max(p[j] + d[i-j])  , ( 1 &amp;lt;= j &amp;lt;= i )&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;bottom-up&quot;&gt;&lt;strong&gt;Bottom-Up&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        int[] d = new int[n + 1];
+        int[] p = new int[n + 1];
+
+        for (int i = 1; i &amp;lt;= n; i++) {
+            p[i] = sc.nextInt();
+        }
+
+        for (int i = 1; i &amp;lt;= n; i++) {
+            for (int j = 1; j &amp;lt;= i; j++) {
+                d[i] = Math.max(d[i], d[i - j] + p[j]);
+            }
+        }
+        System.out.println(d[n]);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun main() {
+    val n = readLine()!!.toInt()
+    val d = IntArray(n + 1) { 0 }
+    val p = &quot;0 ${readLine()!!}&quot;.split(&quot; &quot;).map { it.toInt() }
+    for (i in 1..n)
+        for (j in 1..i) d[i] = max(d[i], d[i - j] + p[j])
+    println(d[n])
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;top-down&quot;&gt;&lt;strong&gt;Top-Down&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.util.Scanner;
+
+class Main {
+    static int[] d = new int[1001];
+    static int[] p = new int[1001];
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        for (int i = 1; i &amp;lt;= n; i++) {
+            p[i] = sc.nextInt();
+        }
+
+        System.out.println(go(n));
+    }
+
+    static int go(int i) {
+        if (i == 0) return 0;
+        if (d[i] &amp;gt; 0) return d[i];
+
+        for (int j = 1; j &amp;lt;= i; j++) {
+            d[i] = Math.max(d[i], go(i - j) + p[j]);
+        }
+        return d[i];
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.lang.Math.max
+import java.util.*
+
+val d = IntArray(1001) { 0 }
+val p = IntArray(1001) { 0 }
+
+fun main() {
+    val sc = Scanner(System.`in`)
+    val n = sc.nextInt()
+    for (i in 1..n) p[i] = sc.nextInt()
+    println(go(n))
+}
+
+fun go(i: Int): Int {
+    if (i == 0) return 0
+    if (d[i] &amp;gt; 0) return d[i]
+    for (j in 1..i) d[i] = max(d[i], go(i - j) + p[j])
+    return d[i];
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;시간 복잡도&lt;/strong&gt;
+1 장부터 n장까지 반복 = O(n)&lt;br /&gt;
+각 i장의 최댓값 반복 = O(n)&lt;/p&gt;
+
+&lt;p&gt;O(n) + O(n) = O(n^2) &lt;/p&gt;
+
+&lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/48b8a2e9c77282ea27e84f102da90fda3299258a/BOJ/java/11052.java&quot;&gt;github.com/beomjo/algorithm-study/blob/48b8a2e9c77282ea27e84f102da90fda3299258a/BOJ/java/11052.java&lt;/a&gt;
+&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/48b8a2e9c7/BOJ/kotlin/11052.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/48b8a2e9c7/BOJ/kotlin/11052.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 11052. 카드 구매하기</summary></entry><entry><title type="html">BOJ 16194. 카드 구매하기 2</title><link href="/boj/boj-16194/" rel="alternate" type="text/html" title="BOJ 16194. 카드 구매하기 2" /><published>2021-02-23T00:00:00+09:00</published><updated>2021-02-23T00:00:00+09:00</updated><id>/boj/boj-16194</id><content type="html" xml:base="/boj/boj-16194/">&lt;h1 id=&quot;boj16194카드구매하기2&quot;&gt;&lt;strong&gt;BOJ 16194. 카드 구매하기 2&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814571-64f10588-ede5-4ec7-b7e2-39c5ed97c1f6.png&quot; alt=&quot;image&quot; /&gt;
 &lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814574-6339898e-bad7-419d-a4e9-cea444a2755f.png&quot; alt=&quot;image&quot; /&gt;
 &lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814578-55a62ac8-aad4-4ff6-9353-a64591177cba.png&quot; alt=&quot;image&quot; /&gt;
@@ -414,126 +657,7 @@ fun go(i: Int): Int {
 
 &lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/2c55da78e6c32999db1d586ac95660b8774e4653/BOJ/java/16194.java&quot;&gt;github.com/beomjo/algorithm-study/blob/2c55da78e6c32999db1d586ac95660b8774e4653/BOJ/java/16194.java&lt;/a&gt;
-[github.com/beomjo/algorithm-study/blob/2c55da78e6/BOJ/kotlin/16194.kt](https://github.com/beomjo/algorithm-study/blob/2c55da78e6/BOJ/kotlin/16194.kt&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 16194. 카드 구매하기 2</summary></entry><entry><title type="html">BOJ 11052. 카드 구매하기</title><link href="/boj/boj-11052/" rel="alternate" type="text/html" title="BOJ 11052. 카드 구매하기" /><published>2021-02-23T00:00:00+09:00</published><updated>2021-02-23T00:00:00+09:00</updated><id>/boj/boj-11052</id><content type="html" xml:base="/boj/boj-11052/">&lt;h1 id=&quot;boj11052카드구매하기&quot;&gt;&lt;strong&gt;BOJ 11052. 카드 구매하기&lt;/strong&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814383-623c5380-f664-4f53-b951-87b88dbe84dd.png&quot; alt=&quot;image&quot; /&gt;
-&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814440-ea126d10-202d-4fcb-893a-312b4785f89c.png&quot; alt=&quot;image&quot; /&gt;
-&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814385-41498557-c2ba-4081-b022-941a8ee8885b.png&quot; alt=&quot;image&quot; /&gt;
-&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814462-c4cc5ae4-7dd4-44f2-8bc1-5b3f00657ca4.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;d[n] = N개의 카드를 갖기 위해 지불해야 하는 금액의 최댓값.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;카드 1개를 p[1]에 구매 -&amp;gt; 남은 카드의 수 i-1 -&amp;gt; p[1] + d[i-1]&lt;br /&gt;
-카드 2개를 p[2]에 구매 -&amp;gt; 남은 카드의 수 i-2 -&amp;gt; p[2] + d[i-2]&lt;br /&gt;
-카드 3개를 p[3]에 구매 -&amp;gt; 남은 카드의 수 i-3 -&amp;gt; p[3] + d[i-3]&lt;br /&gt;
-..&lt;br /&gt;
-..&lt;br /&gt;
-카드 N개를 p[N]에 구매 -&amp;gt; 남은 카드의 수 i-N -&amp;gt; p[N] + d[i-N] &lt;/p&gt;
-
-&lt;p&gt;이므로 범위는 1&amp;lt;= j = i 라는 범위가 성립한다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;점화식&lt;br /&gt;
-d[i] = max( d[i-1] + p[1] , d[i-2]+p[2] ……… )&lt;br /&gt;
-d[i] = max(p[j] + d[i-j])  , ( 1 &amp;lt;= j &amp;lt;= i )&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;bottom-up&quot;&gt;&lt;strong&gt;Bottom-Up&lt;/strong&gt;&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.util.Scanner;
-
-class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-
-        int[] d = new int[n + 1];
-        int[] p = new int[n + 1];
-
-        for (int i = 1; i &amp;lt;= n; i++) {
-            p[i] = sc.nextInt();
-        }
-
-        for (int i = 1; i &amp;lt;= n; i++) {
-            for (int j = 1; j &amp;lt;= i; j++) {
-                d[i] = Math.max(d[i], d[i - j] + p[j]);
-            }
-        }
-        System.out.println(d[n]);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun main() {
-    val n = readLine()!!.toInt()
-    val d = IntArray(n + 1) { 0 }
-    val p = &quot;0 ${readLine()!!}&quot;.split(&quot; &quot;).map { it.toInt() }
-    for (i in 1..n)
-        for (j in 1..i) d[i] = max(d[i], d[i - j] + p[j])
-    println(d[n])
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;top-down&quot;&gt;&lt;strong&gt;Top-Down&lt;/strong&gt;&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.util.Scanner;
-
-class Main {
-    static int[] d = new int[1001];
-    static int[] p = new int[1001];
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-
-        for (int i = 1; i &amp;lt;= n; i++) {
-            p[i] = sc.nextInt();
-        }
-
-        System.out.println(go(n));
-    }
-
-    static int go(int i) {
-        if (i == 0) return 0;
-        if (d[i] &amp;gt; 0) return d[i];
-
-        for (int j = 1; j &amp;lt;= i; j++) {
-            d[i] = Math.max(d[i], go(i - j) + p[j]);
-        }
-        return d[i];
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.lang.Math.max
-import java.util.*
-
-val d = IntArray(1001) { 0 }
-val p = IntArray(1001) { 0 }
-
-fun main() {
-    val sc = Scanner(System.`in`)
-    val n = sc.nextInt()
-    for (i in 1..n) p[i] = sc.nextInt()
-    println(go(n))
-}
-
-fun go(i: Int): Int {
-    if (i == 0) return 0
-    if (d[i] &amp;gt; 0) return d[i]
-    for (j in 1..i) d[i] = max(d[i], go(i - j) + p[j])
-    return d[i];
-}
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;시간 복잡도&lt;/strong&gt;
-1 장부터 n장까지 반복 = O(n)&lt;br /&gt;
-각 i장의 최댓값 반복 = O(n)&lt;/p&gt;
-
-&lt;p&gt;O(n) + O(n) = O(n^2) &lt;/p&gt;
-
-&lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/48b8a2e9c77282ea27e84f102da90fda3299258a/BOJ/java/11052.java&quot;&gt;github.com/beomjo/algorithm-study/blob/48b8a2e9c77282ea27e84f102da90fda3299258a/BOJ/java/11052.java&lt;/a&gt;
-&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/48b8a2e9c7/BOJ/kotlin/11052.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/48b8a2e9c7/BOJ/kotlin/11052.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 11052. 카드 구매하기</summary></entry><entry><title type="html">BOJ 11726. 2xn 타일링</title><link href="/boj/boj-11726/" rel="alternate" type="text/html" title="BOJ 11726. 2xn 타일링" /><published>2021-02-22T00:00:00+09:00</published><updated>2021-02-22T00:00:00+09:00</updated><id>/boj/boj-11726</id><content type="html" xml:base="/boj/boj-11726/">&lt;h1 id=&quot;boj117262xn타일링&quot;&gt;&lt;strong&gt;BOJ 11726. 2xn 타일링&lt;/strong&gt;&lt;/h1&gt;
+[github.com/beomjo/algorithm-study/blob/2c55da78e6/BOJ/kotlin/16194.kt](https://github.com/beomjo/algorithm-study/blob/2c55da78e6/BOJ/kotlin/16194.kt&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 16194. 카드 구매하기 2</summary></entry><entry><title type="html">BOJ 11726. 2xn 타일링</title><link href="/boj/boj-11726/" rel="alternate" type="text/html" title="BOJ 11726. 2xn 타일링" /><published>2021-02-22T00:00:00+09:00</published><updated>2021-02-22T00:00:00+09:00</updated><id>/boj/boj-11726</id><content type="html" xml:base="/boj/boj-11726/">&lt;h1 id=&quot;boj117262xn타일링&quot;&gt;&lt;strong&gt;BOJ 11726. 2xn 타일링&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814181-3a4161b1-1fbe-48e2-9ea7-adcf5c7840f5.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
@@ -622,108 +746,7 @@ fun go(i: Int): Int {
 
 &lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/java/11726.java&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/java/11726.java&lt;/a&gt;
-&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/11726.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/11726.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 11726. 2xn 타일링</summary></entry><entry><title type="html">BOJ 9095. 1, 2, 3 더하기</title><link href="/boj/boj-9095/" rel="alternate" type="text/html" title="BOJ 9095. 1, 2, 3 더하기" /><published>2021-02-22T00:00:00+09:00</published><updated>2021-02-22T00:00:00+09:00</updated><id>/boj/boj-9095</id><content type="html" xml:base="/boj/boj-9095/">&lt;h1 id=&quot;boj-9095-1-2-3-더하기&quot;&gt;&lt;strong&gt;BOJ 9095. 1, 2, 3 더하기&lt;/strong&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814285-981a7caa-3921-4712-842e-2fb3158e1d2b.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;d[n] = 1, 2, 3의 합으로 나타내는 방법의 수&lt;/strong&gt;
-앞부분들은 겹치는 부분들로 memo 해놓고 계속 사용하게 되니&lt;br /&gt;
-맨 마지막에 올 수 있는 1, 2, 3의 방법의 수만 찾아보면 된다.&lt;/p&gt;
-
-&lt;p&gt;d[n] = O + O + O + …. = n 이므로&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;(n -1 ) + 1  = n&lt;/li&gt;
-  &lt;li&gt;(n -2 ) + 2  = n&lt;/li&gt;
-  &lt;li&gt;(n -3 ) + 3  = n&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;위와 같이 3개의 방법이 있다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;점화식&lt;br /&gt;
-d[n] = d[n-1] + d[n-2] + d[n -3]&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;bottom-up&quot;&gt;&lt;strong&gt;Bottom-Up&lt;/strong&gt;&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.util.Scanner;
-
-class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
-        int[] d = new int[11];
-        d[0] = 1;
-        d[1] = 1;
-        d[2] = 2;
-        for (int i = 3; i &amp;lt; 11; i++) {
-            d[i] = d[i - 1] + d[i - 2] + d[i - 3];
-        }
-        while (t-- &amp;gt; 0) {
-            int n = sc.nextInt();
-            System.out.println(d[n]);
-        }
-        sc.close();
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun main() {
-    val d = IntArray(11) { 0 }
-    d[0] = 1
-    d[1] = 1
-    d[2] = 2
-    for (i in 3..10) d[i] = d[i - 1] + d[i - 2] + d[i - 3]
-    repeat(readLine()!!.toInt()) { println(d[readLine()!!.toInt()]) }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;top-down&quot;&gt;&lt;strong&gt;Top-Down&lt;/strong&gt;&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.util.Scanner;
-
-class Main {
-    static int[] d = new int[11];
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
-        while (t-- &amp;gt; 0) {
-            System.out.println(go(sc.nextInt()));
-        }
-    }
-
-    static int go(int i) {
-        if (i == 0) return 1; // 0일때 방법은 1개로 침
-        if (i == 1) return 1;
-        if (i == 2) return 2;
-        if (d[i] &amp;gt; 0) return d[i];
-        d[i] = go(i - 1) + go(i - 2) + go(i - 3);
-        return d[i];
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;val d = IntArray(11) { 0 }
-
-fun main() {
-    repeat(readLine()!!.toInt()) {
-        println(go(readLine()!!.toInt()))
-    }
-}
-
-fun go(i: Int): Int {
-    if (i == 0) return 1 // 0일때 방법은 1개로 침
-    if (i == 1) return 1
-    if (i == 2) return 2
-    if (d[i] &amp;gt; 0) return d[i]
-    d[i] = go(i - 1) + go(i - 2) + go(i - 3)
-    return d[i]
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/java/9095.java&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/java/9095.java&lt;/a&gt;
-&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/9095.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/9095.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 9095. 1, 2, 3 더하기</summary></entry><entry><title type="html">BOJ 1463. 1로만들기</title><link href="/boj/boj-1463/" rel="alternate" type="text/html" title="BOJ 1463. 1로만들기" /><published>2021-02-22T00:00:00+09:00</published><updated>2021-02-22T00:00:00+09:00</updated><id>/boj/boj-1463</id><content type="html" xml:base="/boj/boj-1463/">&lt;h1 id=&quot;boj14631로만들기&quot;&gt;&lt;strong&gt;BOJ 1463. 1로 만들기&lt;/strong&gt;&lt;/h1&gt;
+&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/11726.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/11726.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 11726. 2xn 타일링</summary></entry><entry><title type="html">BOJ 1463. 1로만들기</title><link href="/boj/boj-1463/" rel="alternate" type="text/html" title="BOJ 1463. 1로만들기" /><published>2021-02-22T00:00:00+09:00</published><updated>2021-02-22T00:00:00+09:00</updated><id>/boj/boj-1463</id><content type="html" xml:base="/boj/boj-1463/">&lt;h1 id=&quot;boj14631로만들기&quot;&gt;&lt;strong&gt;BOJ 1463. 1로 만들기&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814062-b7cf724e-9ef8-45eb-9ce6-4af457e5fd0c.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
@@ -838,7 +861,108 @@ fun go(i: Int): Int {
 
 &lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/java/1463.java&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/java/1463.java&lt;/a&gt;
-&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/1463.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/1463.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 1463. 1로 만들기</summary></entry><entry><title type="html">BOJ 2745, 11005, 1373, 1212, 2089 진법변환하기</title><link href="/boj/boj-2745-11005-1373-1212-2089/" rel="alternate" type="text/html" title="BOJ 2745, 11005, 1373, 1212, 2089 진법변환하기" /><published>2021-02-16T00:00:00+09:00</published><updated>2021-02-16T00:00:00+09:00</updated><id>/boj/boj-2745-11005-1373-1212-2089</id><content type="html" xml:base="/boj/boj-2745-11005-1373-1212-2089/">&lt;h1 id=&quot;boj247311005137312122089진법-변환하기&quot;&gt;&lt;strong&gt;BOJ 2473, 11005, 1373, 1212, 2089 진법 변환하기&lt;/strong&gt; &lt;/h1&gt;
+&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/1463.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/1463.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 1463. 1로 만들기</summary></entry><entry><title type="html">BOJ 9095. 1, 2, 3 더하기</title><link href="/boj/boj-9095/" rel="alternate" type="text/html" title="BOJ 9095. 1, 2, 3 더하기" /><published>2021-02-22T00:00:00+09:00</published><updated>2021-02-22T00:00:00+09:00</updated><id>/boj/boj-9095</id><content type="html" xml:base="/boj/boj-9095/">&lt;h1 id=&quot;boj-9095-1-2-3-더하기&quot;&gt;&lt;strong&gt;BOJ 9095. 1, 2, 3 더하기&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814285-981a7caa-3921-4712-842e-2fb3158e1d2b.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;d[n] = 1, 2, 3의 합으로 나타내는 방법의 수&lt;/strong&gt;
+앞부분들은 겹치는 부분들로 memo 해놓고 계속 사용하게 되니&lt;br /&gt;
+맨 마지막에 올 수 있는 1, 2, 3의 방법의 수만 찾아보면 된다.&lt;/p&gt;
+
+&lt;p&gt;d[n] = O + O + O + …. = n 이므로&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;(n -1 ) + 1  = n&lt;/li&gt;
+  &lt;li&gt;(n -2 ) + 2  = n&lt;/li&gt;
+  &lt;li&gt;(n -3 ) + 3  = n&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;위와 같이 3개의 방법이 있다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;점화식&lt;br /&gt;
+d[n] = d[n-1] + d[n-2] + d[n -3]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;bottom-up&quot;&gt;&lt;strong&gt;Bottom-Up&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        int[] d = new int[11];
+        d[0] = 1;
+        d[1] = 1;
+        d[2] = 2;
+        for (int i = 3; i &amp;lt; 11; i++) {
+            d[i] = d[i - 1] + d[i - 2] + d[i - 3];
+        }
+        while (t-- &amp;gt; 0) {
+            int n = sc.nextInt();
+            System.out.println(d[n]);
+        }
+        sc.close();
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun main() {
+    val d = IntArray(11) { 0 }
+    d[0] = 1
+    d[1] = 1
+    d[2] = 2
+    for (i in 3..10) d[i] = d[i - 1] + d[i - 2] + d[i - 3]
+    repeat(readLine()!!.toInt()) { println(d[readLine()!!.toInt()]) }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;top-down&quot;&gt;&lt;strong&gt;Top-Down&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.util.Scanner;
+
+class Main {
+    static int[] d = new int[11];
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        while (t-- &amp;gt; 0) {
+            System.out.println(go(sc.nextInt()));
+        }
+    }
+
+    static int go(int i) {
+        if (i == 0) return 1; // 0일때 방법은 1개로 침
+        if (i == 1) return 1;
+        if (i == 2) return 2;
+        if (d[i] &amp;gt; 0) return d[i];
+        d[i] = go(i - 1) + go(i - 2) + go(i - 3);
+        return d[i];
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;val d = IntArray(11) { 0 }
+
+fun main() {
+    repeat(readLine()!!.toInt()) {
+        println(go(readLine()!!.toInt()))
+    }
+}
+
+fun go(i: Int): Int {
+    if (i == 0) return 1 // 0일때 방법은 1개로 침
+    if (i == 1) return 1
+    if (i == 2) return 2
+    if (d[i] &amp;gt; 0) return d[i]
+    d[i] = go(i - 1) + go(i - 2) + go(i - 3)
+    return d[i]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/java/9095.java&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/java/9095.java&lt;/a&gt;
+&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/9095.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/9095.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 9095. 1, 2, 3 더하기</summary></entry><entry><title type="html">BOJ 2745, 11005, 1373, 1212, 2089 진법변환하기</title><link href="/boj/boj-2745-11005-1373-1212-2089/" rel="alternate" type="text/html" title="BOJ 2745, 11005, 1373, 1212, 2089 진법변환하기" /><published>2021-02-16T00:00:00+09:00</published><updated>2021-02-16T00:00:00+09:00</updated><id>/boj/boj-2745-11005-1373-1212-2089</id><content type="html" xml:base="/boj/boj-2745-11005-1373-1212-2089/">&lt;h1 id=&quot;boj247311005137312122089진법-변환하기&quot;&gt;&lt;strong&gt;BOJ 2473, 11005, 1373, 1212, 2089 진법 변환하기&lt;/strong&gt; &lt;/h1&gt;
 
 &lt;h2 id=&quot;boj-2745진법-변환--n진법의-수를-10진법으로-변경하기&quot;&gt;&lt;strong&gt;BOJ 2745. 진법 변환 ( N진법의 수를 10진법으로 변경하기)&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134813790-c97936d0-6953-41bb-8f04-bc5fdc944c89.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
@@ -1238,70 +1362,4 @@ fun getGCD(a: Long, b: Long): Long = if (b == 0L) a else getGCD(b, a % b)
 
 &lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/java/9613.java&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/java/9613.java&lt;/a&gt;
-&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/9613.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/9613.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 9613. GCD 합</summary></entry><entry><title type="html">BOJ 17087. 숨바꼭질 6</title><link href="/boj/boj-17087/" rel="alternate" type="text/html" title="BOJ 17087. 숨바꼭질 6" /><published>2021-02-16T00:00:00+09:00</published><updated>2021-02-16T00:00:00+09:00</updated><id>/boj/boj-17087</id><content type="html" xml:base="/boj/boj-17087/">&lt;h2 id=&quot;boj17087숨바꼭질6&quot;&gt;&lt;strong&gt;BOJ 17087. 숨바꼭질 6&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134813665-ea78c50e-0d04-4a56-adee-9cce242c164b.png&quot; alt=&quot;image&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134813668-0e937230-70cd-4cd4-a317-c0bc89ab713e.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;첫 줄에  N(동생의 수), S(현재 위치)가 주어지고&lt;br /&gt;
-둘째 줄에 동생들의 위치가 주어진다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;3 3 // 동생의수 3, 현재위치 3
-1 7 11 // 동생들의 위치
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;현재 위치 3에서 동생들의 위치 (1, 7, 11)까지의 각각 거리를 계산하여 배열에 저장한다.&lt;br /&gt;
-배열에 저장된 현재 위치와의 거리 차이들의 최대 공약수가 이동할 수 있는 최대 거리 D가 된다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.util.Scanner;
-
-class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int s = sc.nextInt();
-        int[] distances = new int[n];
-        for (int i = 0; i &amp;lt; n; i++) {
-            int b = sc.nextInt();
-            distances[i] = Math.abs(s - b);
-        }
-        int result = distances[0];
-        for (int i = 1; i &amp;lt; n; i++) {
-            result = getGCD(result, distances[i]);
-        }
-        System.out.println(result);
-        sc.close();
-    }
-    
-    static int getGCD(int a, int b) {
-        if (b == 0) {
-            return a;
-        } else {
-            return getGCD(b, a % b);
-        }
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import kotlin.math.abs
-
-fun main() {
-    val (n, s) = readLine()!!.split(&quot; &quot;)
-    val distances = readLine()!!.split(&quot; &quot;)
-        .map { it.toInt() }
-        .map { s.toInt() - it }
-        .map { abs(it) }
-    var result = distances[0]
-    (1 until n.toInt()).forEach {
-        result = getGCD(result, distances[it])
-    }
-    println(result)
-}
-
-fun getGCD(a: Int, b: Int): Int = if (b == 0) a else getGCD(b, a % b)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/java/17087.java&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/java/17087.java&lt;/a&gt;
-&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/17087.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/17087.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 17087. 숨바꼭질 6</summary></entry></feed>
+&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/9613.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/9613.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 9613. GCD 합</summary></entry></feed>

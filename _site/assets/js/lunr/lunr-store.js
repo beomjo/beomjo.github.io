@@ -131,6 +131,12 @@ var store = [{
         "url": "/boj/boj-15990/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 10844. 쉬운 계단 수",
+        "excerpt":"BOJ 10844. 쉬운 계단 수 풀이 d[i][j] = 길이 i의 마지막숫자가 j인 수의 개수 길이 i의 마지막으로 오는수가 j일때  마지막 수 j의 바로 전 수는 j+1 or j-1 일 수밖에 없다 (계단수는 인접한 모든 자릿수의 차이가 1이므로) 마지막 수 j로 끝났을 경우를 2차원 배열에 저장한다.  j가 0일때는 j+1만 올 수 있고, j가 9 일때는 j-1만...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-10844/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "Jekyll, minimal-mistakes 테마를 적용하기",
         "excerpt":"설정 Github Pages 호스팅을 위해 ${GITHUB_ID}.github.io 라는 이름으로 리파지토리를 생성해야 한다 Gem을 이용해서 Jekyll 을 설치한다 테마 적용 minimal-mistake 빠른 시작 가이드를 참고하여 진행한다. minimal-mistake Repository에서 소스를 가져와 옮긴다. 옮긴 후 다음 과정을 진행한다. 불필요 내용 제거 minimal-mistakes-jekyll repository에서 소스를 가져왔다면 불필요한 내용을 제거한다. .editorconfig .gitattributes .github /docs /test CHANGELOG.md...","categories": ["Blogs"],
         "tags": ["Jekyll","minimal-mistakes"],

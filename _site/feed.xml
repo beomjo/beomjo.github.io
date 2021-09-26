@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-09-27T00:46:39+09:00</updated><id>/feed.xml</id><title type="html">Beom Log</title><subtitle>beomjo amazing website.</subtitle><author><name>beomjo</name></author><entry><title type="html">Jekyll, minimal-mistakes 테마를 적용하기</title><link href="/blogs/create-blog/" rel="alternate" type="text/html" title="Jekyll, minimal-mistakes 테마를 적용하기" /><published>2021-06-29T00:00:00+09:00</published><updated>2021-06-29T00:00:00+09:00</updated><id>/blogs/create-blog</id><content type="html" xml:base="/blogs/create-blog/">&lt;h2 id=&quot;설정&quot;&gt;설정&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-09-27T00:48:56+09:00</updated><id>/feed.xml</id><title type="html">Beom Log</title><subtitle>beomjo amazing website.</subtitle><author><name>beomjo</name></author><entry><title type="html">Jekyll, minimal-mistakes 테마를 적용하기</title><link href="/blogs/create-blog/" rel="alternate" type="text/html" title="Jekyll, minimal-mistakes 테마를 적용하기" /><published>2021-06-29T00:00:00+09:00</published><updated>2021-06-29T00:00:00+09:00</updated><id>/blogs/create-blog</id><content type="html" xml:base="/blogs/create-blog/">&lt;h2 id=&quot;설정&quot;&gt;설정&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Github Pages 호스팅을 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;${GITHUB_ID}.github.io&lt;/code&gt; 라는 이름으로 리파지토리를 생성해야 한다&lt;/li&gt;
   &lt;li&gt;Gem을 이용해서 Jekyll 을 설치한다&lt;/li&gt;
@@ -113,7 +113,103 @@ tags:
   - minimal-mistakes
 toc: true
 ---
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>beomjo</name></author><category term="Blogs" /><category term="Jekyll" /><category term="minimal-mistakes" /><summary type="html">설정 Github Pages 호스팅을 위해 ${GITHUB_ID}.github.io 라는 이름으로 리파지토리를 생성해야 한다 Gem을 이용해서 Jekyll 을 설치한다</summary></entry><entry><title type="html">BOJ 10844. 쉬운 계단 수</title><link href="/boj/boj-10844/" rel="alternate" type="text/html" title="BOJ 10844. 쉬운 계단 수" /><published>2021-03-04T00:00:00+09:00</published><updated>2021-03-04T00:00:00+09:00</updated><id>/boj/boj-10844</id><content type="html" xml:base="/boj/boj-10844/">&lt;h1 id=&quot;boj10844쉬운계단수&quot;&gt;&lt;strong&gt;BOJ 10844. 쉬운 계단 수&lt;/strong&gt;&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>beomjo</name></author><category term="Blogs" /><category term="Jekyll" /><category term="minimal-mistakes" /><summary type="html">설정 Github Pages 호스팅을 위해 ${GITHUB_ID}.github.io 라는 이름으로 리파지토리를 생성해야 한다 Gem을 이용해서 Jekyll 을 설치한다</summary></entry><entry><title type="html">BOJ 2193. 이친수</title><link href="/boj/boj-2193/" rel="alternate" type="text/html" title="BOJ 2193. 이친수" /><published>2021-03-05T00:00:00+09:00</published><updated>2021-03-05T00:00:00+09:00</updated><id>/boj/boj-2193</id><content type="html" xml:base="/boj/boj-2193/">&lt;h1 id=&quot;boj2193이친수&quot;&gt;&lt;strong&gt;BOJ 2193.  이친수&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814808-0d28d75a-fbe5-4a95-8439-d4e5e41cf9fa.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;마지막으로 오는 수가 0 일 때 그 앞에 올 수 있는 수는 0,1이다.&lt;br /&gt;
+마지막으로 오는 수가 1 일 때 그 앞에 올 수 있는 수는 0이다.&lt;/p&gt;
+
+&lt;p&gt;점화식&lt;br /&gt;
+d[i][0] = d[i-1][0] + d[i-1][1] &lt;br /&gt;
+d[i][1] = d[i-1][0]&lt;/p&gt;
+
+&lt;h3 id=&quot;bottom-up&quot;&gt;&lt;strong&gt;Bottom-Up&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        sc.close();
+
+        long[][] d = new long[n + 1][2];
+
+        d[1][1] = 1;
+
+        for (int i = 2; i &amp;lt;= n; i++) {
+            for (int j = 0; j &amp;lt;= 1; j++) {
+                if (j == 0) d[i][j] = d[i - 1][0] + d[i - 1][1];
+                else d[i][j] = d[i - 1][0];
+            }
+        }
+        System.out.println(d[n][0] + d[n][1]);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun main() {
+   val n = readLine()!!.toInt()
+   val d = Array(n + 1) { LongArray(2) }
+   d[1][1] = 1
+
+   for (i in 2..n) {
+       for (j in 0..1) {
+           d[i][j] = if (j == 0) d[i - 1][0] + d[i - 1][1] else d[i - 1][0]
+       }
+   }
+
+   println(d[n][0] + d[n][1])
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;top-down&quot;&gt;&lt;strong&gt;Top-Down&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.util.Scanner;
+
+class Main {
+    static long[][] d = new long[91][2];
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println(go(n, 0) + go(n, 1));
+    }
+
+    static long go(int i, int j) {
+        if (i == 1 &amp;amp;&amp;amp; j == 1) return 1;
+        if (i == 1 &amp;amp;&amp;amp; j == 0) return 0;
+        if (d[i][j] &amp;gt; 0) return d[i][j];
+
+        if (j == 0) {
+            d[i][j] = go(i - 1, 0) + go(i - 1, 1);
+        } else {
+            d[i][j] = go(i - 1, 0);
+        }
+
+        return d[i][j];
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;val d = Array(91) { LongArray(2) }
+
+fun main() {
+    val n = readLine()!!.toInt()
+    println(go(n, 0) + go(n, 1))
+}
+
+fun go(i: Int, j: Int): Long {
+    if (i == 1 &amp;amp;&amp;amp; j == 1) return 1
+    if (i == 1 &amp;amp;&amp;amp; j == 0) return 0
+    if (d[i][j] &amp;gt; 0) return d[i][j]
+
+    d[i][j] = if (j == 0) go(i - 1, 0) + go(i - 1, 1) else go(i - 1, 0)
+
+    return d[i][j]
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/commit/221467a4207833969f3527a5586429820482d6d9&quot;&gt;github.com/beomjo/algorithm-study/commit/221467a4207833969f3527a5586429820482d6d9&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 2193.  이친수</summary></entry><entry><title type="html">BOJ 10844. 쉬운 계단 수</title><link href="/boj/boj-10844/" rel="alternate" type="text/html" title="BOJ 10844. 쉬운 계단 수" /><published>2021-03-04T00:00:00+09:00</published><updated>2021-03-04T00:00:00+09:00</updated><id>/boj/boj-10844</id><content type="html" xml:base="/boj/boj-10844/">&lt;h1 id=&quot;boj10844쉬운계단수&quot;&gt;&lt;strong&gt;BOJ 10844. 쉬운 계단 수&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134814761-6e21576b-d7d6-414a-9f6d-e32cece99e28.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
@@ -962,341 +1058,7 @@ fun go(i: Int): Int {
 
 &lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/java/9095.java&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/java/9095.java&lt;/a&gt;
-&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/9095.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/9095.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 9095. 1, 2, 3 더하기</summary></entry><entry><title type="html">BOJ 2745, 11005, 1373, 1212, 2089 진법변환하기</title><link href="/boj/boj-2745-11005-1373-1212-2089/" rel="alternate" type="text/html" title="BOJ 2745, 11005, 1373, 1212, 2089 진법변환하기" /><published>2021-02-16T00:00:00+09:00</published><updated>2021-02-16T00:00:00+09:00</updated><id>/boj/boj-2745-11005-1373-1212-2089</id><content type="html" xml:base="/boj/boj-2745-11005-1373-1212-2089/">&lt;h1 id=&quot;boj247311005137312122089진법-변환하기&quot;&gt;&lt;strong&gt;BOJ 2473, 11005, 1373, 1212, 2089 진법 변환하기&lt;/strong&gt; &lt;/h1&gt;
-
-&lt;h2 id=&quot;boj-2745진법-변환--n진법의-수를-10진법으로-변경하기&quot;&gt;&lt;strong&gt;BOJ 2745. 진법 변환 ( N진법의 수를 10진법으로 변경하기)&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134813790-c97936d0-6953-41bb-8f04-bc5fdc944c89.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;풀이&lt;/strong&gt;
-B 진법의 수 N과, B가 주어진다.&lt;br /&gt;
-10진법을 넘어가는 수는 &lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;A:10
-B:11
-C:12
-D:13
-..
-..
-..
-Y:34
-Z:35
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위와 같이 A-Z로 표현한다.&lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ZZZZZ 36&lt;/code&gt;을 입력하였다면 36진법으로 표시된 문자열&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ZZZZZ&lt;/code&gt;이므로&lt;br /&gt;
-입력받은 문자열을 반복문을 통해 char를 처음부터 확인한다.&lt;/p&gt;
-
-&lt;p&gt;char문자를 그대로 int로 캐스팅하면 &lt;br /&gt;
-char값은 아스키코드값으로 변경되기 때문에 Z는 35가 아닌 90으로 변경되게 된다.&lt;/p&gt;
-
-&lt;p&gt;아스키코드표를 참고하여 &lt;br /&gt;
-&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134813794-22723d60-d460-4eff-a366-5b01b60b90ad.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;0~9이라면  
-    &lt;ul&gt;
-      &lt;li&gt;char - ‘0’&lt;/li&gt;
-      &lt;li&gt;char - 48&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;A-Z이라면
-    &lt;ul&gt;
-      &lt;li&gt;char - ‘A’ +10&lt;/li&gt;
-      &lt;li&gt;char - 55&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt; 또는&lt;/p&gt;
-
-&lt;p&gt;Character wrapper class의 메서드인 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Character.getNumericValue(c);&lt;/code&gt;을 사용하여 10진수 숫자로 변경한다.&lt;br /&gt;
-10진수 숫자를 얻었다면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B^(자리수 - 1)&lt;/code&gt;을 곱한다.&lt;br /&gt;
-즉, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ZZZZZ&lt;/code&gt;은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(35\* 35^4) + (35\*35^3) + (35\*35^2) + (35\*35^1) + \+ (35\*35^0)&lt;/code&gt;이다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.io.*;
-import java.util.Scanner;
-
-class Main {
-    public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(System.in);
-
-        String n = sc.next();
-        int b = sc.nextInt();
-
-        int answer = 0;
-
-        for (int i = 0; i &amp;lt; n.length(); i++) {
-            char c = n.charAt(i);
-            int r = 0;
-            if (c &amp;gt;= 'A' &amp;amp;&amp;amp; c &amp;lt;= 'Z') {
-                r += (c - 'A' + 10);
-            } else {
-                r += (c - '0');
-            }
-            answer += r * Math.pow(b, n.length() - 1 - i);
-        }
-
-        System.out.println(answer);
-        sc.close();
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import kotlin.math.pow
-
-fun main() {
-    val (n, b) = readLine()!!.split(&quot; &quot;)
-    n.foldIndexed(0) { i, aar, c -&amp;gt;
-        val r = if (c in 'A'..'Z') (c - 'A' + 10) else (c - '0')
-        aar + (r * b.toDouble().pow(n.length - 1 - i)).toInt()
-    }.let(::println)
-}
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;boj-11005진법-변환-2-10진법의-수를-n진법으로-변경하기&quot;&gt;&lt;strong&gt;BOJ 11005.  진법 변환 2( 10진법의 수를 N진법으로 변경하기)&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134813801-7744865c-7c08-44cb-a3aa-215af96c6c43.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;풀이&lt;/strong&gt;
-10진법의 수 N을  B진법으로 변환한다.&lt;/p&gt;
-
-&lt;p&gt;입력받은 10진법의 수를 B로 나누고,&lt;br /&gt;
-나머지가 10 보다 큰지 (A-Z)&lt;br /&gt;
-나머지가 10 보다 작은지 (0-9)인지를 구분하여 나머지를 기록한다.&lt;br /&gt;
-N을 B로 더 이상 나눌 수 없을 때까지 나머지를 기록한다.
-그 후 기록한 나머지를 거꾸로 출력한다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.io.*;
-import java.util.Scanner;
-
-class Main {
-    public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(System.in);
-
-        int n = sc.nextInt();
-        int b = sc.nextInt();
-
-        StringBuilder answer = new StringBuilder();
-
-        while (n &amp;gt; 0) {
-            long rest = n % b;
-            if (rest &amp;gt;= 10) {
-                answer.append((char) ((rest - 10) + 'A'));
-            } else {
-                answer.append((char) (rest + '0'));
-            }
-            n /= b;
-        }
-        System.out.println(answer.reverse().toString());
-        sc.close();
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun main() {
-    var (n, b) = readLine()!!.split(&quot; &quot;).map { it.toInt() }
-    var answer = &quot;&quot;
-    while (n &amp;gt; 0) {
-        val rest = n % b
-        answer += when (rest) {
-            in 0..9 -&amp;gt; rest
-            else -&amp;gt; ('A' + (rest - 10))
-        }.toString()
-        n /= b
-    }
-    println(answer.reversed())
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;boj-13732진수-8진수--2진수를-8진수로-변환&quot;&gt;&lt;strong&gt;BOJ 1373.  2진수 8진수 ( 2진수를 8진수로 변환)&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134813812-c4d9ba6c-45e0-4df3-b136-286c3b99cd08.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;풀이&lt;/strong&gt;
-입력받은 8 진수의 수가 3자리씩 끊어지는지 확인하여   &lt;br /&gt;
-끊어지지 않는다면 맨 앞에 0을 추가한다.&lt;br /&gt;
-맨 뒤부터 각 자리의 값들을 계산하여 더한 후 기록한다.&lt;br /&gt;
-기록한 값을 거꾸로 출력한다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.io.*;
-import java.util.Stack;
-
-class Main {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        String input = br.readLine();
-        Stack&amp;lt;Integer&amp;gt; stack = new Stack&amp;lt;&amp;gt;();
-
-        if (input.length() % 3 != 0) {
-            for (int i = 0; i &amp;lt; input.length() % 3; i++) {
-                input = &quot;0&quot; + input;
-            }
-        }
-        for (int i = input.length() - 1; i &amp;gt; 0; i -= 3) {
-            int oneSeat = Character.getNumericValue(input.charAt(i));
-            int twoSeat = Character.getNumericValue(input.charAt(i - 1));
-            int fourSeat = Character.getNumericValue(input.charAt(i - 2));
-            stack.push(oneSeat + twoSeat * 2 + fourSeat * 4);
-        }
-        while (!stack.isEmpty()) {
-            bw.write(stack.pop().toString());
-        }
-        bw.flush();
-        bw.close();
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;단순하게 BigInteger를 이용하는 방법도 있다.&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.math.BigInteger
-
-fun main() {
-    val b = BigInteger(readLine()!!, 2)
-    println(b.toString(8))
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;boj-12128진수-2진수8진수를-2진수로-변환&quot;&gt;&lt;strong&gt;BOJ 1212. 8진수 2진수(8진수를 2진수로 변환)&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134813818-ffb3b74c-740d-4adc-a11c-3f03aec2556b.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;풀이&lt;/strong&gt;
-8진법(8가지)에서 2진법으로 변환한 배열을 만든다.&lt;br /&gt;
-현재 진법의 자리 수마다 2진법으로 바꾸어 이어 붙인다. &lt;strong&gt;제일 앞쪽의 0을 제거한다.&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.io.*;
-import java.util.Scanner;
-
-class Main {
-    static String[] octToBin = {&quot;000&quot;, &quot;001&quot;, &quot;010&quot;, &quot;011&quot;, &quot;100&quot;, &quot;101&quot;, &quot;110&quot;, &quot;111&quot;};
-    public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(System.in);
-        StringBuilder sb = new StringBuilder();
-
-        char[] oct = sc.next().toCharArray();
-
-        if (oct.length == 1 &amp;amp;&amp;amp; oct[0] == '0') {
-            System.out.println(0);
-            return;
-        }
-
-        for (char c : oct) {
-            sb.append(octToBin[c - '0']);
-        }
-
-        while (sb.charAt(0) == '0') {
-            sb.deleteCharAt(0);
-        }
-        System.out.println(sb.toString());
-        sc.close();
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;val octToBin: List&amp;lt;String&amp;gt; = listOf(&quot;000&quot;, &quot;001&quot;, &quot;010&quot;, &quot;011&quot;, &quot;100&quot;, &quot;101&quot;, &quot;110&quot;, &quot;111&quot;)
-fun main() {
-    readLine()!!.toCharArray().let { arr -&amp;gt;
-        if (arr.size == 1 &amp;amp;&amp;amp; arr[0] == '0') &quot;0&quot;
-        else arr.joinToString(&quot;&quot;) { c -&amp;gt; octToBin[c - '0'] }
-            .let { it.substring(it.indexOf('1')) }
-    }.let(::println)
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;boj-2089-2진수&quot;&gt;&lt;strong&gt;BOJ 2089. -2진수&lt;/strong&gt; &lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134813821-c36c47db-daa4-4462-b951-c031291ec55a.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;풀이&lt;/strong&gt;
-보통의 10진법에서 2진법으로 변환하는 방법을 따르지만 &lt;strong&gt;나눈 몫을 올림 하여 처리한다.&lt;/strong&gt;&lt;br /&gt;
-10진법의 수 N을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-13&lt;/code&gt;을 입력으로 받았을 때, N이 0이 될 때까지 -2로 나눈나머지를 계속 저장하고, 나눈 몫을 올림 하여 계속 이어간다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(-13) % (-2) = 1&lt;/code&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;나머지 1 맨 앞에 저장&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(-13) / (-2 ) = 6.5&lt;/code&gt; -&amp;gt; 반올림 7&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(7) % (-2) = -1&lt;/code&gt; -&amp;gt; 절댓값 1
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;나머지 1 맨 앞에 저장&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(7) / (-2) = - 3.5&lt;/code&gt; -&amp;gt; 반올림 -3&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(-3) % (-2) = -1&lt;/code&gt;-&amp;gt; 절댓값 1
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;나머지 1 맨 앞에 저장&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(-3) / (-2) = 1.5&lt;/code&gt; -&amp;gt; 반올림 2&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(2) % (-2) = 0&lt;/code&gt; 
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;0 맨 앞에 저장&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(2) / (-2) = -1&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(-1) % (-2) = -1&lt;/code&gt;-&amp;gt;절댓값 1
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;나머지 1 맨 앞에 저장&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(-1) / (-2) = 0.5&lt;/code&gt; -&amp;gt; 반올림 1&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(1) % (-2) = 1&lt;/code&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;나머지 1 맨 앞에 저장&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(1) / (-2) = -0.5&lt;/code&gt; -&amp;gt; 반올림 -0.0&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;위 과정을 거친 후에 110111이라는 -2 진법의 수를 출력한다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.io.*;
-import java.util.Scanner;
-
-class Main {
-    public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(System.in);
-        StringBuilder sb = new StringBuilder();
-
-        long n = sc.nextLong();
-
-        if (n == 0) {
-            System.out.println(0);
-            return;
-        }
-
-        while (n != 0) {
-            sb.insert(0, Math.abs(n % -2));
-            n = (long) Math.ceil((double) n / -2);
-        }
-
-        System.out.println(sb.toString());
-        sc.close();
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.lang.StringBuilder
-import kotlin.math.abs
-import kotlin.math.ceil
-
-fun main() {
-    var n = readLine()!!.toInt()
-    if (n == 0) {
-        println(n)
-        return
-    }
-    val sb = StringBuilder()
-    while (n != 0) {
-        sb.insert(0, abs(n % -2))
-        n = ceil(n.toDouble() / -2).toInt()
-    }
-
-    println(sb)
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 2473, 11005, 1373, 1212, 2089 진법 변환하기 </summary></entry><entry><title type="html">BOJ 9613. GCD 합</title><link href="/boj/boj-9613/" rel="alternate" type="text/html" title="BOJ 9613. GCD 합" /><published>2021-02-16T00:00:00+09:00</published><updated>2021-02-16T00:00:00+09:00</updated><id>/boj/boj-9613</id><content type="html" xml:base="/boj/boj-9613/">&lt;h1 id=&quot;boj9613gcd합&quot;&gt;&lt;strong&gt;BOJ 9613. GCD 합&lt;/strong&gt;&lt;/h1&gt;
+&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/9095.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/9095.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 9095. 1, 2, 3 더하기</summary></entry><entry><title type="html">BOJ 9613. GCD 합</title><link href="/boj/boj-9613/" rel="alternate" type="text/html" title="BOJ 9613. GCD 합" /><published>2021-02-16T00:00:00+09:00</published><updated>2021-02-16T00:00:00+09:00</updated><id>/boj/boj-9613</id><content type="html" xml:base="/boj/boj-9613/">&lt;h1 id=&quot;boj9613gcd합&quot;&gt;&lt;strong&gt;BOJ 9613. GCD 합&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134813532-dcef875e-31d4-49e9-a6a1-dda14dbd2ab0.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;

@@ -95,6 +95,12 @@ var store = [{
         "url": "/boj/boj-9613/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 1463. 1로만들기",
+        "excerpt":"BOJ 1463. 1로 만들기 풀이 d[n]= 1로 만드는 연산을 하는 최솟값 점화식 d[n] = min(d[n-1] +1 , d[n2] + 1, d[n3] + 1 )  대략적인 논리로, 그대로 쓰지는 않고 2나 3으로 나누어 떨어지는지 확인 조건문으로 처리 필요 Bottom-Up 입력이 1일때는 어떠한 연산도 할 필요가 없으므로 d[1]에 0을 넣어 시작한다. import java.io.*; import java.util.Scanner;...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-1463/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "Jekyll, minimal-mistakes 테마를 적용하기",
         "excerpt":"설정 Github Pages 호스팅을 위해 ${GITHUB_ID}.github.io 라는 이름으로 리파지토리를 생성해야 한다 Gem을 이용해서 Jekyll 을 설치한다 테마 적용 minimal-mistake 빠른 시작 가이드를 참고하여 진행한다. minimal-mistake Repository에서 소스를 가져와 옮긴다. 옮긴 후 다음 과정을 진행한다. 불필요 내용 제거 minimal-mistakes-jekyll repository에서 소스를 가져왔다면 불필요한 내용을 제거한다. .editorconfig .gitattributes .github /docs /test CHANGELOG.md...","categories": ["Blogs"],
         "tags": ["Jekyll","minimal-mistakes"],

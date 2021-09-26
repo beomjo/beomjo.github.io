@@ -3,7 +3,6 @@ title: Jekyll, minimal-mistakes 테마를 적용하기
 categories:
   - Blogs
 tags:
-  - Blog
   - Jekyll
   - minimal-mistakes
 toc: true

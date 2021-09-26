@@ -77,6 +77,12 @@ var store = [{
         "url": "/boj/boj-6588/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 17087. 숨바꼭질 6",
+        "excerpt":"BOJ 17087. 숨바꼭질 6 풀이 첫 줄에  N(동생의 수), S(현재 위치)가 주어지고 둘째 줄에 동생들의 위치가 주어진다. 3 3 // 동생의수 3, 현재위치 3 1 7 11 // 동생들의 위치 현재 위치 3에서 동생들의 위치 (1, 7, 11)까지의 각각 거리를 계산하여 배열에 저장한다. 배열에 저장된 현재 위치와의 거리 차이들의 최대 공약수가 이동할 수...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-17087/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "BOJ 9613. GCD 합",
         "excerpt":"BOJ 9613. GCD 합 풀이 첫 줄에는 테스트 케이스 개수 t(1&lt;=t&lt;100)이 주어지고  그다음 줄부터 테스트 케이스를 입력받는다. 첫 줄에 테스트를 할 수의 개수 n (1&lt;n&lt;=100)이 주어지고, 그다음 n개의 수가 주어진다. 4 10 20 30 40 10과 20의 최대공약수, 20과 30의 최대공약수, 30과 40의 최대공약수를 각각 구하여 모두 더한다. import java.util.Scanner; class Main { public static void main(String[]...","categories": ["BOJ"],
         "tags": ["Algorithm","BOJ"],

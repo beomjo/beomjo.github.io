@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-09-26T15:36:17+09:00</updated><id>/feed.xml</id><title type="html">Beom Log</title><subtitle>beomjo amazing website.</subtitle><author><name>beomjo</name></author><entry><title type="html">Jekyll, minimal-mistakes 테마를 적용하기</title><link href="/blogs/create-blog/" rel="alternate" type="text/html" title="Jekyll, minimal-mistakes 테마를 적용하기" /><published>2021-06-29T00:00:00+09:00</published><updated>2021-06-29T00:00:00+09:00</updated><id>/blogs/create-blog</id><content type="html" xml:base="/blogs/create-blog/">&lt;h2 id=&quot;설정&quot;&gt;설정&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-09-26T21:20:52+09:00</updated><id>/feed.xml</id><title type="html">Beom Log</title><subtitle>beomjo amazing website.</subtitle><author><name>beomjo</name></author><entry><title type="html">Jekyll, minimal-mistakes 테마를 적용하기</title><link href="/blogs/create-blog/" rel="alternate" type="text/html" title="Jekyll, minimal-mistakes 테마를 적용하기" /><published>2021-06-29T00:00:00+09:00</published><updated>2021-06-29T00:00:00+09:00</updated><id>/blogs/create-blog</id><content type="html" xml:base="/blogs/create-blog/">&lt;h2 id=&quot;설정&quot;&gt;설정&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Github Pages 호스팅을 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;${GITHUB_ID}.github.io&lt;/code&gt; 라는 이름으로 리파지토리를 생성해야 한다&lt;/li&gt;
   &lt;li&gt;Gem을 이용해서 Jekyll 을 설치한다&lt;/li&gt;
@@ -113,7 +113,110 @@ tags:
   - minimal-mistakes
 toc: true
 ---
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>beomjo</name></author><category term="Blogs" /><category term="Jekyll" /><category term="minimal-mistakes" /><summary type="html">설정 Github Pages 호스팅을 위해 ${GITHUB_ID}.github.io 라는 이름으로 리파지토리를 생성해야 한다 Gem을 이용해서 Jekyll 을 설치한다</summary></entry><entry><title type="html">BOJ 9093. 단어 뒤집기</title><link href="/boj/boj-9093/" rel="alternate" type="text/html" title="BOJ 9093. 단어 뒤집기" /><published>2021-01-19T00:00:00+09:00</published><updated>2021-01-19T00:00:00+09:00</updated><id>/boj/boj-9093</id><content type="html" xml:base="/boj/boj-9093/">&lt;h1 id=&quot;boj-9093-단어-뒤집기&quot;&gt;BOJ 9093. 단어 뒤집기&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>beomjo</name></author><category term="Blogs" /><category term="Jekyll" /><category term="minimal-mistakes" /><summary type="html">설정 Github Pages 호스팅을 위해 ${GITHUB_ID}.github.io 라는 이름으로 리파지토리를 생성해야 한다 Gem을 이용해서 Jekyll 을 설치한다</summary></entry><entry><title type="html">BOJ 9012. 괄호</title><link href="/boj/boj-9012/" rel="alternate" type="text/html" title="BOJ 9012. 괄호" /><published>2021-01-20T00:00:00+09:00</published><updated>2021-01-20T00:00:00+09:00</updated><id>/boj/boj-9012</id><content type="html" xml:base="/boj/boj-9012/">&lt;h2 id=&quot;boj9012괄호&quot;&gt;&lt;strong&gt;BOJ 9012. 괄호&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;문제&quot;&gt;&lt;strong&gt;문제&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;괄호 문자열(Parenthesis String, PS)은 두 개의 괄호 기호인 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(&lt;/code&gt;와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;)&lt;/code&gt; 만으로 구성되어 있는 문자열이다. 그중에서 괄호의 모양이 바르게 구성된 문자열을 올바른 괄호 문자열(Valid PS, VPS)이라고 부른다. &lt;br /&gt;
+한 쌍의 괄호 기호로 된 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;( )&lt;/code&gt; 문자열은 기본 VPS이라고 부른다. 만일 x 가 VPS 라면 이것을 하나의 괄호에 넣은 새로운 문자열 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(x)&lt;/code&gt;도 VPS 가 된다. 그리고 두 VPS x와 y를 접합(concatenation)시킨 새로운 문자열 xy도 VPS 가 된다. &lt;br /&gt;
+예를 들어 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(())()&lt;/code&gt;와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;((()))&lt;/code&gt; 는 VPS이지만 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(()(”, “(())()))&lt;/code&gt; , 그리고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(()&lt;/code&gt; 는 모두 VPS 가 아닌 문자열이다. &lt;/p&gt;
+
+&lt;p&gt;여러분은 입력으로 주어진 괄호 문자열이 VPS 인지 아닌지를 판단해서 그 결과를 YES 와 NO로 나타내어야 한다. &lt;/p&gt;
+
+&lt;h3 id=&quot;입력&quot;&gt;&lt;strong&gt;입력&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;입력 데이터는 표준 입력을 사용한다. 입력은 T개의 테스트 데이터로 주어진다. 입력의 첫 번째 줄에는 입력 데이터의 수를 나타내는 정수 T가 주어진다. 각 테스트 데이터의 첫째 줄에는 괄호 문자열이 한 줄에 주어진다. 하나의 괄호 문자열의 길이는 2 이상 50 이하이다. &lt;/p&gt;
+
+&lt;h3 id=&quot;출력&quot;&gt;&lt;strong&gt;출력&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;출력은 표준 출력을 사용한다. 만일 입력 괄호 문자열이 올바른 괄호 문자열(VPS)이면 “YES”, 아니면 “NO”를 한 줄에 하나씩 차례대로 출력해야 한다. &lt;/p&gt;
+
+&lt;h3 id=&quot;예제입력1&quot;&gt;&lt;strong&gt;예제 입력 1&lt;/strong&gt; &lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;6
+(())())
+(((()())()
+(()())((()))
+((()()(()))(((())))()
+()()()()(()()())()
+(()((())()(
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;예제출력1&quot;&gt;&lt;strong&gt;예제 출력 1&lt;/strong&gt; &lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NO
+NO
+YES
+NO
+YES
+NO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;예제입력2&quot;&gt;&lt;strong&gt;예제 입력 2&lt;/strong&gt; &lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;3
+((
+))
+())(()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;예제출력2&quot;&gt;&lt;strong&gt;예제 출력 2&lt;/strong&gt; &lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NO
+NO
+NO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Stack을 이용하여 올바른 괄호 문자열인지 판한단다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(&lt;/code&gt; 가 나오면 스택에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(&lt;/code&gt;를 넣는다&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;)&lt;/code&gt; 가 나오면 스택에서 하나를 뺄 수 있는지 확인하여 뺀다
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Main {
+  public static void main(String[] args) throws IOException {
+      BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+      int total = Integer.parseInt(bufferedReader.readLine());
+      BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
+
+      while (total-- &amp;gt; 0) {
+          Stack&amp;lt;Character&amp;gt; stack = new Stack&amp;lt;&amp;gt;();
+          String input = bufferedReader.readLine();
+          boolean isVPS = true;
+          for (int i = 0; i &amp;lt; input.length(); i++) {
+              char c = input.charAt(i);
+              if (c == '(') {
+                  stack.push(c);
+              } else {
+                  if (!stack.isEmpty()) {
+                      stack.pop();
+                  } else {
+                      isVPS = false;
+                      break;
+                  }
+              }
+          }
+          if (!stack.isEmpty()) {
+              isVPS = false;
+          }
+
+          bufferedWriter.write(isVPS ? &quot;YES\n&quot; : &quot;NO\n&quot;);
+      }
+      bufferedWriter.flush();
+      return;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;코틀린 풀이&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun main() {
+    repeat(readLine()?.toInt() ?: return) {
+        var prev = readLine()!!
+        var curr = prev.replace(&quot;()&quot;, &quot;&quot;)
+
+        while (prev != curr) {
+            prev = curr
+            curr = curr.replace(&quot;()&quot;, &quot;&quot;)
+        }
+        println(if (curr.isEmpty()) &quot;YES&quot; else &quot;NO&quot;)
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 9012. 괄호</summary></entry><entry><title type="html">BOJ 9093. 단어 뒤집기</title><link href="/boj/boj-9093/" rel="alternate" type="text/html" title="BOJ 9093. 단어 뒤집기" /><published>2021-01-19T00:00:00+09:00</published><updated>2021-01-19T00:00:00+09:00</updated><id>/boj/boj-9093</id><content type="html" xml:base="/boj/boj-9093/">&lt;h1 id=&quot;boj-9093-단어-뒤집기&quot;&gt;BOJ 9093. 단어 뒤집기&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/9093&quot;&gt;www.acmicpc.net/problem/9093&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;문제&quot;&gt;&lt;strong&gt;문제&lt;/strong&gt;&lt;/h2&gt;

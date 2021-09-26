@@ -173,6 +173,12 @@ var store = [{
         "url": "/boj/boj-1476/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 2309. 일곱 난쟁이",
+        "excerpt":"BOJ 2309. 일곱 난쟁이 풀이 9 난쟁이 중 7 난쟁이가 아닌 2 난쟁이를 찾는 문제이니 나올 수 있는 경우의 수를 계산해보면 순서를 고려하지않고 n중 r을 찾는 경우이므로, 조합 nCr에 대입하면 이므로 36이다. 경우의 수가 적으니 모든 경우의 수에 대입하여 정답을 찾아보도록 한다. 7 난쟁이의 키의 합이 100이니 7 난쟁이가 아닌 2명을 제외하였을 때...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-2309/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "Jekyll, minimal-mistakes 테마를 적용하기",
         "excerpt":"설정 Github Pages 호스팅을 위해 ${GITHUB_ID}.github.io 라는 이름으로 리파지토리를 생성해야 한다 Gem을 이용해서 Jekyll 을 설치한다 테마 적용 minimal-mistake 빠른 시작 가이드를 참고하여 진행한다. minimal-mistake Repository에서 소스를 가져와 옮긴다. 옮긴 후 다음 과정을 진행한다. 불필요 내용 제거 minimal-mistakes-jekyll repository에서 소스를 가져왔다면 불필요한 내용을 제거한다. .editorconfig .gitattributes .github /docs /test CHANGELOG.md...","categories": ["Blogs"],
         "tags": ["Jekyll","minimal-mistakes"],

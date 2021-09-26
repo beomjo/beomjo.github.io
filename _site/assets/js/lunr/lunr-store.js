@@ -35,6 +35,12 @@ var store = [{
         "url": "/boj/boj-10799/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 1676. 팩토리얼 0의 개수",
+        "excerpt":"BOJ 1676. 팩토리얼 0의 개수 풀이 0의 개수는 10을 의미하고 10은 2*5로 나타낼 수 있다. 팩토리얼을 소인수 분해하여 2의 개수 5의 개수를 구한다. Java import java.util.Scanner; class Main { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int n = sc.nextInt(); int countOfTwo = 0; int countOfFive = 0; for (int...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-1676/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "BOJ 17289. 오큰수",
         "excerpt":"BOJ 17298. 오큰수 풀이 오큰수란 입력된 숫자의 오른쪽에 있는 수들 중 가장 큰 수를 의미한다.  입력이 3 5 2 7 일 때 입력 개수가 4개이므로 0부터 3까지 루프를 돌아준다. i == 0 일 때  stack은 비어있으므로 stack.push i == 1 일때 stack.isNotEmpty &amp;&amp; number(5) &gt; stack.peek().element(3)은 true 이므로  while문을 돌아 answer[0]에 5를 넣는다. 그리고 stack에도 element:5,...","categories": ["BOJ"],
         "tags": ["Algorithm","BOJ"],

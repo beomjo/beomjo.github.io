@@ -11,6 +11,12 @@ var store = [{
         "url": "/boj/boj-9012/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 1157. 요세푸스 문제",
+        "excerpt":"BOJ 1158. 요세푸스 문제 풀이 큐를 이용하여 요세푸스 순열을 만든다. 먼저 입력으로 N=7이 들어왔을 때 초기 상태로 1부터 7까지 큐에 넣는다. 그 다음  K=3이므로 3번째 사람을 제거해야 하므로 큐에서 순서대로 poll() 한 뒤 다시 offer()로 큐에 넣어준다. 그리고 3번째가 되었을 때 poll() 한뒤 다시 큐에 넣지 않고 출력 버퍼에 저장한다. 다시 반복하여 2번 poll(),...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-1158/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "BOJ 1406. 에디터",
         "excerpt":"BOJ 1406. 에디터 풀이 커서의 왼쪽과 오른쪽에 각각 Stack으로 관리한다. 먼저 커서는 입력 문장의 끝에 위치하므로  커서 왼쪽 스택에 입력문장을 모두 넣고 시작한다. 입력문자 abcd  그 다음 P x를 수행한다. 왼쪽 스택에 x를 push()한다. 다음 L 명령을 수행한다. 왼쪽으로 커서를 한 칸 이동하게 되므로 왼쪽 스택에서 pop(), 오른쪽으로 push() 그다음 P y를...","categories": ["BOJ"],
         "tags": ["Algorithm","BOJ"],

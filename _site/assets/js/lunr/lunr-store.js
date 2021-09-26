@@ -83,6 +83,12 @@ var store = [{
         "url": "/boj/boj-17087/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 2745, 11005, 1373, 1212, 2089 진법변환하기",
+        "excerpt":"BOJ 2473, 11005, 1373, 1212, 2089 진법 변환하기  BOJ 2745. 진법 변환 ( N진법의 수를 10진법으로 변경하기) 풀이 B 진법의 수 N과, B가 주어진다. 10진법을 넘어가는 수는  A:10 B:11 C:12 D:13 .. .. .. Y:34 Z:35 위와 같이 A-Z로 표현한다. ZZZZZ 36을 입력하였다면 36진법으로 표시된 문자열ZZZZZ이므로 입력받은 문자열을 반복문을 통해 char를 처음부터 확인한다. char문자를 그대로 int로 캐스팅하면 ...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-2745-11005-1373-1212-2089/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "BOJ 9613. GCD 합",
         "excerpt":"BOJ 9613. GCD 합 풀이 첫 줄에는 테스트 케이스 개수 t(1&lt;=t&lt;100)이 주어지고  그다음 줄부터 테스트 케이스를 입력받는다. 첫 줄에 테스트를 할 수의 개수 n (1&lt;n&lt;=100)이 주어지고, 그다음 n개의 수가 주어진다. 4 10 20 30 40 10과 20의 최대공약수, 20과 30의 최대공약수, 30과 40의 최대공약수를 각각 구하여 모두 더한다. import java.util.Scanner; class Main { public static void main(String[]...","categories": ["BOJ"],
         "tags": ["Algorithm","BOJ"],

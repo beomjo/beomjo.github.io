@@ -29,6 +29,12 @@ var store = [{
         "url": "/boj/boj-1874/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 10799. 쇠막대기",
+        "excerpt":"BOJ 10799. 쇠막대기 풀이 레이저는 인접한 괄호쌍()로 표현한다. 쇠막대기의 왼쪽 끝은 여는 괄호(, 오른쪽 끝은 닫는괄호)로 표현한다. 여는 괄호(를 만났을 때는 Stack에 넣어준다. 닫는 괄호 )를 만났을때 Stack.peak()가 여는괄호(일 경우 Stack.pop() 한 후 남은 Stack의 size가 잘린 쇠막대기의 개수가 된다. Stack.peak()가 닫는괄호)일 경우 Stack.pop() 한 후 쇠막대기의 개수를 +1 한다 이때 쇠막대기의...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-10799/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "BOJ 17413. 단어뒤집기2",
         "excerpt":"BOJ 17413. 단어 뒤집기 2 풀이 단어를 뒤집는 방법은 Stack에 순서대로 push 하고 다시 pop 하여 단어를 뒤집는다. 태그 &lt; or' 'or'\\n'를 만나면 만나면 이전까지 Stack에 쌓아놓은 단어들을 모두 pop 한다. import java.io.*; import java.util.Stack; class Main { public static void main(String[] args) throws IOException { BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); BufferedWriter...","categories": ["BOJ"],
         "tags": ["Algorithm","BOJ"],

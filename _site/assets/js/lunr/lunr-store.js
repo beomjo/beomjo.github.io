@@ -137,6 +137,12 @@ var store = [{
         "url": "/boj/boj-10844/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 11053. 가장 긴 증가하는 부분수열 (LIS)",
+        "excerpt":"BOJ 11053. 가장 긴 증가하는 부분수열 (LIS) 가장 긴 증가하는 부분수열(Longest Increasing Subsequece) [나무위키] 어떤 임의의 수열이 주어질 때, 이 수열에서 몇 개의 수들을 제거해서 부분수열을 만들 수 있다. 이때 만들어진 부분수열 중 오름차순으로 정렬된 가장 긴 수열을 최장 증가 부분 수열이라 한다. 풀이 d[i] = a[1], …… a[i] 까지 수열이 있을 때, a[i]를 마지막으로 하는 가장 긴 증가하는 부분수열의 길이 예를들어 a[1], a[2], a[3], a[4] …. a[i] 라는 수열이 있을 때  a[i]의 바로 전 수는 뭘까?...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-11053/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "BOJ 2193. 이친수",
         "excerpt":"BOJ 2193.  이친수 풀이 마지막으로 오는 수가 0 일 때 그 앞에 올 수 있는 수는 0,1이다. 마지막으로 오는 수가 1 일 때 그 앞에 올 수 있는 수는 0이다. 점화식 d[i][0] = d[i-1][0] + d[i-1][1] d[i][1] = d[i-1][0] Bottom-Up class Main { public static void main(String[] args) { Scanner sc =...","categories": ["BOJ"],
         "tags": ["Algorithm","BOJ"],

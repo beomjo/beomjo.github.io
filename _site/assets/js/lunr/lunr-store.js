@@ -35,6 +35,12 @@ var store = [{
         "url": "/boj/boj-10799/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 17289. 오큰수",
+        "excerpt":"BOJ 17298. 오큰수 풀이 오큰수란 입력된 숫자의 오른쪽에 있는 수들 중 가장 큰 수를 의미한다.  입력이 3 5 2 7 일 때 입력 개수가 4개이므로 0부터 3까지 루프를 돌아준다. i == 0 일 때  stack은 비어있으므로 stack.push i == 1 일때 stack.isNotEmpty &amp;&amp; number(5) &gt; stack.peek().element(3)은 true 이므로  while문을 돌아 answer[0]에 5를 넣는다. 그리고 stack에도 element:5,...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-17289/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "BOJ 17413. 단어뒤집기2",
         "excerpt":"BOJ 17413. 단어 뒤집기 2 풀이 단어를 뒤집는 방법은 Stack에 순서대로 push 하고 다시 pop 하여 단어를 뒤집는다. 태그 &lt; or' 'or'\\n'를 만나면 만나면 이전까지 Stack에 쌓아놓은 단어들을 모두 pop 한다. import java.io.*; import java.util.Stack; class Main { public static void main(String[] args) throws IOException { BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); BufferedWriter...","categories": ["BOJ"],
         "tags": ["Algorithm","BOJ"],

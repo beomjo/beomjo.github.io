@@ -11,6 +11,12 @@ var store = [{
         "url": "/boj/boj-9012/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 1406. 에디터",
+        "excerpt":"BOJ 1406. 에디터 풀이 커서의 왼쪽과 오른쪽에 각각 Stack으로 관리한다. 먼저 커서는 입력 문장의 끝에 위치하므로  커서 왼쪽 스택에 입력문장을 모두 넣고 시작한다. 입력문자 abcd  그 다음 P x를 수행한다. 왼쪽 스택에 x를 push()한다. 다음 L 명령을 수행한다. 왼쪽으로 커서를 한 칸 이동하게 되므로 왼쪽 스택에서 pop(), 오른쪽으로 push() 그다음 P y를...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-1406/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "BOJ 1874. 스택수열",
         "excerpt":"BOJ 1874. 스택 수열 ​ 풀이 입력으로 4 3 6 8 7 5 2 1으로 주어졌을 때 먼저 1부터 시작하여 4까지 Stack에 순서대로 push(+)한다. ​ 입력인 4가 되었을 때 Stack에서 pop(-) 또 다음 입력인 3이 되었을 때 Stack에서 pop(-)한다. ​ ​ 다음 입력인 6이 될 때까지 Stack에 다시 push(+) ​...","categories": ["BOJ"],
         "tags": ["Algorithm","BOJ"],

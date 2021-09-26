@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-09-26T21:29:07+09:00</updated><id>/feed.xml</id><title type="html">Beom Log</title><subtitle>beomjo amazing website.</subtitle><author><name>beomjo</name></author><entry><title type="html">Jekyll, minimal-mistakes 테마를 적용하기</title><link href="/blogs/create-blog/" rel="alternate" type="text/html" title="Jekyll, minimal-mistakes 테마를 적용하기" /><published>2021-06-29T00:00:00+09:00</published><updated>2021-06-29T00:00:00+09:00</updated><id>/blogs/create-blog</id><content type="html" xml:base="/blogs/create-blog/">&lt;h2 id=&quot;설정&quot;&gt;설정&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-09-26T23:27:30+09:00</updated><id>/feed.xml</id><title type="html">Beom Log</title><subtitle>beomjo amazing website.</subtitle><author><name>beomjo</name></author><entry><title type="html">Jekyll, minimal-mistakes 테마를 적용하기</title><link href="/blogs/create-blog/" rel="alternate" type="text/html" title="Jekyll, minimal-mistakes 테마를 적용하기" /><published>2021-06-29T00:00:00+09:00</published><updated>2021-06-29T00:00:00+09:00</updated><id>/blogs/create-blog</id><content type="html" xml:base="/blogs/create-blog/">&lt;h2 id=&quot;설정&quot;&gt;설정&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Github Pages 호스팅을 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;${GITHUB_ID}.github.io&lt;/code&gt; 라는 이름으로 리파지토리를 생성해야 한다&lt;/li&gt;
   &lt;li&gt;Gem을 이용해서 Jekyll 을 설치한다&lt;/li&gt;
@@ -113,7 +113,116 @@ tags:
   - minimal-mistakes
 toc: true
 ---
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>beomjo</name></author><category term="Blogs" /><category term="Jekyll" /><category term="minimal-mistakes" /><summary type="html">설정 Github Pages 호스팅을 위해 ${GITHUB_ID}.github.io 라는 이름으로 리파지토리를 생성해야 한다 Gem을 이용해서 Jekyll 을 설치한다</summary></entry><entry><title type="html">BOJ 1874. 스택수열</title><link href="/boj/boj-1874/" rel="alternate" type="text/html" title="BOJ 1874. 스택수열" /><published>2021-02-01T00:00:00+09:00</published><updated>2021-02-01T00:00:00+09:00</updated><id>/boj/boj-1874</id><content type="html" xml:base="/boj/boj-1874/">&lt;h1 id=&quot;boj-1874-스택-수열&quot;&gt;&lt;strong&gt;BOJ 1874. 스택 수열&lt;/strong&gt;&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>beomjo</name></author><category term="Blogs" /><category term="Jekyll" /><category term="minimal-mistakes" /><summary type="html">설정 Github Pages 호스팅을 위해 ${GITHUB_ID}.github.io 라는 이름으로 리파지토리를 생성해야 한다 Gem을 이용해서 Jekyll 을 설치한다</summary></entry><entry><title type="html">BOJ 1406. 에디터</title><link href="/boj/boj-1406/" rel="alternate" type="text/html" title="BOJ 1406. 에디터" /><published>2021-02-01T00:00:00+09:00</published><updated>2021-02-01T00:00:00+09:00</updated><id>/boj/boj-1406</id><content type="html" xml:base="/boj/boj-1406/">&lt;h1 id=&quot;boj1406에디터&quot;&gt;&lt;strong&gt;BOJ 1406. 에디터&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134811823-74ded316-1bd7-4f9c-80aa-5d7305a75b33.png&quot; alt=&quot;image&quot; /&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134811829-e9bd4fb6-19ac-493b-89b3-99c7c99e913d.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;풀이&quot;&gt;&lt;strong&gt;풀이&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;커서의 왼쪽과 오른쪽에 각각 Stack으로 관리한다.&lt;br /&gt;
+먼저 커서는 입력 문장의 끝에 위치하므로  
+커서 왼쪽 스택에 입력문장을 모두 넣고 시작한다.&lt;/p&gt;
+
+&lt;p&gt;입력문자 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;abcd&lt;/code&gt;  
+&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134811877-a7ba12c6-c3ad-4724-b078-3baae3490ca8.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;그 다음 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;P x&lt;/code&gt;를 수행한다.&lt;br /&gt;
+왼쪽 스택에 x를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;push()&lt;/code&gt;한다.&lt;br /&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134811880-cedd0695-1e76-415b-87b1-f9a10a339512.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;다음 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;L&lt;/code&gt; 명령을 수행한다.&lt;br /&gt;
+왼쪽으로 커서를 한 칸 이동하게 되므로&lt;br /&gt;
+왼쪽 스택에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pop()&lt;/code&gt;, 오른쪽으로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;push()&lt;/code&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134811883-144816c0-4fcc-4e44-a705-06f29b5c1f24.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;그다음 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;P y&lt;/code&gt;를 수행한다.&lt;br /&gt;
+왼쪽 스택에 y를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;push()&lt;/code&gt;한다.&lt;br /&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134811886-e931acc1-7d3c-4281-bdab-806ff32cf7f4.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;그 다음 출력을 위해 오른쪽 스택으로 모두 이동&lt;br /&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134811888-fcc29116-8de1-483c-8ae7-75a8b04ac7f8.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;오른쪽 스택에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pop()&lt;/code&gt; 하여 순서대로 출력&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import java.io.*;
+import java.util.Stack;
+
+class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String str = br.readLine();
+        int t = Integer.parseInt(br.readLine());
+        Stack&amp;lt;Character&amp;gt; leftStack = new Stack&amp;lt;&amp;gt;();
+        Stack&amp;lt;Character&amp;gt; rightStack = new Stack&amp;lt;&amp;gt;();
+        
+        for (int i = 0; i &amp;lt; str.length(); i++) {
+            leftStack.push(str.charAt(i));
+        }
+
+        while (t-- &amp;gt; 0) {
+            String input = br.readLine();
+            String[] inputs = input.split(&quot; &quot;);
+            if (&quot;L&quot;.equals(inputs[0])) {
+                if (leftStack.size() &amp;gt; 0) {
+                    Character c = leftStack.pop();
+                    rightStack.push(c);
+                }
+            } else if (&quot;D&quot;.equals(inputs[0])) {
+                if (rightStack.size() &amp;gt; 0) {
+                    Character c = rightStack.pop();
+                    leftStack.push(c);
+                }
+            } else if (&quot;B&quot;.equals(inputs[0])) {
+                if (leftStack.size() &amp;gt; 0) {
+                    leftStack.pop();
+                }
+            } else {
+                leftStack.push(inputs[1].charAt(0));
+            }
+        }
+
+        StringBuilder sb = new StringBuilder();
+        while (!leftStack.isEmpty()) {
+            rightStack.push(leftStack.pop());
+        }
+
+        while (!rightStack.isEmpty()) {
+            sb.append(rightStack.pop());
+        }
+
+        System.out.print(sb);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;코틀린 풀이에서는 &lt;/p&gt;
+
+&lt;p&gt;커서 왼쪽은 Stack 오른쪽은 LinkedList를 이용한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun main() {
+    val str = readLine()!!
+    val t = readLine()!!.toInt()
+
+    val st = Stack&amp;lt;Char&amp;gt;()
+    val q = LinkedList&amp;lt;Char&amp;gt;()
+
+    for (ch in str) {
+        st.push(ch)
+    }
+
+    repeat(t) {
+        when (val input = readLine()!!) {
+            &quot;L&quot; -&amp;gt; if (!st.isEmpty()) q.addFirst(st.pop())
+            &quot;D&quot; -&amp;gt; if (!q.isEmpty()) st.push(q.poll())
+            &quot;B&quot; -&amp;gt; if (!st.isEmpty()) st.pop()
+            else -&amp;gt; st.push(input.split(&quot; &quot;)[1][0])
+        }
+    }
+    println(&quot;${st.joinToString(&quot;&quot;)}${q.joinToString(&quot;&quot;)}&quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;풀이소스&quot;&gt;풀이소스&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/java/1406.java&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/java/1406.java&lt;/a&gt;
+&lt;a href=&quot;https://github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/1406.kt&quot;&gt;github.com/beomjo/algorithm-study/blob/main/BOJ/kotlin/1406.kt&lt;/a&gt;&lt;/p&gt;</content><author><name>beomjo</name></author><category term="BOJ" /><category term="Algorithm" /><category term="BOJ" /><summary type="html">BOJ 1406. 에디터</summary></entry><entry><title type="html">BOJ 1874. 스택수열</title><link href="/boj/boj-1874/" rel="alternate" type="text/html" title="BOJ 1874. 스택수열" /><published>2021-02-01T00:00:00+09:00</published><updated>2021-02-01T00:00:00+09:00</updated><id>/boj/boj-1874</id><content type="html" xml:base="/boj/boj-1874/">&lt;h1 id=&quot;boj-1874-스택-수열&quot;&gt;&lt;strong&gt;BOJ 1874. 스택 수열&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134807944-b729b1d3-f874-4571-b8a6-dcc81ed99389.png&quot; alt=&quot;image&quot; /&gt;
 &lt;img src=&quot;https://user-images.githubusercontent.com/39984656/134807958-7dbfe12b-0611-44bd-b9f5-46b40999aaf8.png&quot; alt=&quot;image&quot; /&gt;
 ​&lt;/p&gt;

@@ -77,6 +77,12 @@ var store = [{
         "url": "/boj/boj-6588/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 9613. GCD 합",
+        "excerpt":"BOJ 9613. GCD 합 풀이 첫 줄에는 테스트 케이스 개수 t(1&lt;=t&lt;100)이 주어지고  그다음 줄부터 테스트 케이스를 입력받는다. 첫 줄에 테스트를 할 수의 개수 n (1&lt;n&lt;=100)이 주어지고, 그다음 n개의 수가 주어진다. 4 10 20 30 40 10과 20의 최대공약수, 20과 30의 최대공약수, 30과 40의 최대공약수를 각각 구하여 모두 더한다. import java.util.Scanner; class Main { public static void main(String[]...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-9613/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "Jekyll, minimal-mistakes 테마를 적용하기",
         "excerpt":"설정 Github Pages 호스팅을 위해 ${GITHUB_ID}.github.io 라는 이름으로 리파지토리를 생성해야 한다 Gem을 이용해서 Jekyll 을 설치한다 테마 적용 minimal-mistake 빠른 시작 가이드를 참고하여 진행한다. minimal-mistake Repository에서 소스를 가져와 옮긴다. 옮긴 후 다음 과정을 진행한다. 불필요 내용 제거 minimal-mistakes-jekyll repository에서 소스를 가져왔다면 불필요한 내용을 제거한다. .editorconfig .gitattributes .github /docs /test CHANGELOG.md...","categories": ["Blogs"],
         "tags": ["Jekyll","minimal-mistakes"],

@@ -1,5 +1,5 @@
 # Beom log
-https://beomjo.github.io/
+https://beomjo.github.io
 
 ## 테마  
 [minimal-mistakes](https://mmistakes.github.io/minimal-mistakes/)  
@@ -10,9 +10,3 @@ https://beomjo.github.io/
 bundle exec jekyll serve
 open http://localhost:4000
 ```  
-
-
-
-
-
-

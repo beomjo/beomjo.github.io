@@ -190,4 +190,10 @@ var store = [{
         "tags": ["Jekyll","minimal-mistakes"],
         "url": "/blogs/create-blog/",
         "teaser": "/assets/images/bio-photo.jpg"
+      },{
+        "title": "BOJ 10804. 카드 역배치",
+        "excerpt":"BOJ 3085. 카드 역배치 풀이 1~20까지 숫자를 오름차순으로 저장하고, start와 end를 입력받아 start와 end사이를 서로 바꾸어준다. 에를들어 5~9 사이의 수를 바꾼다고 하였을 때 5, 6, 7, 8, 9 -&gt; 9, 6, 7, 8, 5 -&gt; 9, 8, 7, 6, 5 이 된다. class Main { static int[] arr = new int[21]; public...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-10804/",
+        "teaser": "/assets/images/bio-photo.jpg"
       }]

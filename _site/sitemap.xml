@@ -133,6 +133,14 @@
 <lastmod>2021-09-30T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>/boj/boj-10808/</loc>
+<lastmod>2021-10-01T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>/datastructure/linkedlist/</loc>
+<lastmod>2021-10-04T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>/about/</loc>
 </url>
 <url>
@@ -143,6 +151,9 @@
 </url>
 <url>
 <loc>/categories/</loc>
+</url>
+<url>
+<loc>/categories/data_structure</loc>
 </url>
 <url>
 <loc>/</loc>

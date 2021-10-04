@@ -196,4 +196,16 @@ var store = [{
         "tags": ["Algorithm","BOJ"],
         "url": "/boj/boj-10804/",
         "teaser": "/assets/images/bio-photo.jpg"
+      },{
+        "title": "BOJ 10808. 알파벳 개수",
+        "excerpt":"BOJ 10808. 알파벳 개수 풀이 알파벳 a~z의 개수를 저장하는 26사이즈의 배열을 만들어 카운트한다. a가 아스키코드 97 b가 아스키코드 98 c가 아스키코드 99 … z가 아스키코드 122 이므로 char에서 97을 빼면 index를 얻을 수 있다. import java.io.BufferedReader; import java.io.IOException; import java.io.InputStreamReader; class Main { public static void main(String[] args) throws IOException...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-10808/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
+        "title": "LinkedList",
+        "excerpt":"LinkedList  ","categories": ["DataStructure"],
+        "tags": ["Algorithm","자료구조","LinkedList"],
+        "url": "/datastructure/linkedlist/",
+        "teaser": "/assets/images/bio-photo.jpg"
       }]

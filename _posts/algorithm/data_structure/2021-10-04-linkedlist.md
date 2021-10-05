@@ -12,27 +12,27 @@ toc: true
 # 연결리스트(LinkedList)
 
 ## LinkedList란?
-원소를 저장할 때 그 다음 원소가 있는 위치를 포함하는 방식으로 저장하는 방식이다.  
+원소를 저장할 때 그다음 원소가 있는 위치를 포함하는 방식으로 저장하는 방식이다.  
 
 
 ## LinkedList의 성질
 - K번째 원소를 확인/변경하기 위해 O(K)가 필요함
-- 임의의 위치에 원소를 추가, 임의의 위치에 원소를 제거하기 위해 O(1)또는 O(N)이 필요함  
-- 원소들이 메모리상에 연속해있지않아 캐시메모리적중률(Cache hit rate)가 낮지만 할당이 다소 쉽다
+- 임의의 위치에 원소를 추가, 임의의 위치에 원소를 제거하기 위해 O(1) 또는 O(N)이 필요함  
+- 원소들이 메모리상에 연속해있지 않아 캐시메모리적중률(Cache hit rate)이 낮지만, 할당이 다소 쉽다
 
 
 ## LinkedList의 종류
 - 단일 연결 리스트(Singly Linked List)
     - 각 원소가 자신의 다음 원소의 주소를 들고 있는 LinkedList
 - 이중 연결 리스트(Doubly Linked List)
-    - 각 원소가 이전원소와 다음원소의 주소를 둘 다 들고 있는 LinkedList
+    - 각 원소가 이전 원소와 다음 원소의 주소를 둘 다 들고 있는 LinkedList
 - 원형 연결 리스트(Circular Linked List)
-    - 끝과 처음이 연결되어 있는 LinkedList
-    - 각 원소가 이중연결리스트처럼 이전과, 다음 주소를 모두 들고 있어도 상관 없다  
+    - 끝과 처음이 연결된 LinkedList
+    - 각 원소가 이중연결리스트처럼 이전과 다음 주소를 모두 들고 있어도 상관없다
 
 
 ## Array vs LinkedList
-| | Array | LinkedList |
+| \ | Array | LinkedList |
 |--|-----|-----------|
 |K번째 원소 접근|O(1)|O(K)|
 |임의 위치에 원소 추가/제거|O(N)|첫 번째와 마지막의 참조를 저장하고 있을 경우<br>- 첫 번째에 추가 O(1)<br>- 마지막에 추가 O(1)<br>- 임의의 위치까지 탐색 O(N), 추가 O(1) |
@@ -66,7 +66,7 @@ class LinkedList<E> {
         }
     }
 ```
-첫 번재 node를 저장할 `first`, 마지막 node를 저장할 `last` 그리고 `size`를 저장할 변수를 선언한다.  
+첫 번째 node를 저장할 `first`, 마지막 node를 저장할 `last` 그리고 `size`를 저장할 변수를 선언한다.  
 Node는 내부 클래스로 선언하며, item과, 이전 node, 다음 node를 갖는다.  
 
 ```java
@@ -86,10 +86,10 @@ private Node<E> node(int index) {
 ```
 node 함수는 index가 주어지면 해당 노드를 찾는 함수이다.  
 size를 절반으로 나누어 절반보다 적다면 처음부터 탐색, 절반보다 크다면 마지막부터 탐색한다.  
-예를들어 size가 10이라면 1010(10) -> 101(5)가되고,  
-이때 주어진 index가 3이라면 0부터 탐색, 주어진 index가 7이라면 10부터 9,8.. 순으로 탐색하게 된다.  
+예를 들어 size가 10이라면 1010(10) -> 101(5)이 되고,  
+이때 주어진 index가 3이라면 0부터 탐색, 주어진 index가 7이라면 10부터 9, 8…. 순으로 탐색하게 된다.  
 
-그 다음 원소를 추가 하는 함수를 구현하자.  
+그다음 원소를 추가하는 함수를 구현하자.  
 ```java
     public boolean add(E element) {
         linkLast(element);
@@ -114,7 +114,7 @@ size를 절반으로 나누어 절반보다 적다면 처음부터 탐색, 절�
 ```
 `add(element)` 함수는 마지막에 원소를 추가하며, boolean을 반환한다.   
 `add(index, element)`는 index가 size와 같다면 마지막에 원소를 추가, 아니라면 주어진 index에 새 원소를 추가하고, 기존 원소는 새로 추가된 원소의 다음 순서가 된다.  
-`addFirst(element)`는 첫 번째에 원소를추가, `addLast(element)`는 마지막에 원소를 추가한다.  
+`addFirst(element)`는 첫 번째에 원소를 추가, `addLast(element)`는 마지막에 원소를 추가한다.  
 `linkFirst`, `linkLast`, `linkBefore`의 구현은 아래와 같다.  
 ```java
  private void linkFirst(E e) {

@@ -452,3 +452,42 @@ class LinkedList<E> {
     }
 }
 ```
+
+## 예시
+```java
+class Main {
+    public static void main(String[] args) {
+        LinkedList<String> linkedList = new LinkedList<>();
+        linkedList.add("20"); //20
+        traverse(linkedList);
+        linkedList.add(0, "10"); // 10 20
+        traverse(linkedList);
+        linkedList.addLast("25"); // 10 20 25
+        traverse(linkedList);
+        linkedList.addFirst("0"); // 0 10 20 25
+        traverse(linkedList);
+        linkedList.add("20");  // 0 10 20 25 30
+        traverse(linkedList);
+
+        linkedList.set(0, "5"); // 5 10 20 25 30
+        traverse(linkedList);
+
+        linkedList.remove(4); // 5 10 20 25
+        traverse(linkedList);
+        linkedList.removeFirst(); // 10 20 25
+        traverse(linkedList);
+        linkedList.removeLast(); // 10 20
+        traverse(linkedList);
+
+        linkedList.clear();
+        traverse(linkedList);
+    }
+
+    static void traverse(LinkedList<String> linkedList) {
+        for (int i = 0; i < linkedList.size(); i++) {
+            System.out.print(linkedList.get(i) + " ");
+        }
+        System.out.println("\n");
+    }
+}
+```

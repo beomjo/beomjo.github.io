@@ -204,7 +204,7 @@ var store = [{
         "teaser": "/assets/images/bio-photo.jpg"
       },{
         "title": "LinkedList",
-        "excerpt":"LinkedList  ","categories": ["DataStructure"],
+        "excerpt":"연결리스트(LinkedList) LinkedList란? 원소를 저장할 때 그다음 원소가 있는 위치를 포함하는 방식으로 저장하는 방식이다. LinkedList의 성질 K번째 원소를 확인/변경하기 위해 O(K)가 필요함 임의의 위치에 원소를 추가, 임의의 위치에 원소를 제거하기 위해 O(1) 또는 O(N)이 필요함 원소들이 메모리상에 연속해있지 않아 캐시메모리적중률(Cache hit rate)이 낮지만, 할당이 다소 쉽다 LinkedList의 종류 단일 연결 리스트(Singly...","categories": ["DataStructure"],
         "tags": ["Algorithm","자료구조","LinkedList"],
         "url": "/datastructure/linkedlist/",
         "teaser": "/assets/images/bio-photo.jpg"

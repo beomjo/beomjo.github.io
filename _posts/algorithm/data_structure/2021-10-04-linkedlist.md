@@ -1,5 +1,5 @@
 ---
-title: LinkedList
+title: 연결리스트(LinkedList)
 categories:
   - DataStructure
 tags:

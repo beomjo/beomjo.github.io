@@ -1,4 +1,4 @@
-# Beom log
+# Beom Log
 https://beomjo.github.io
 
 ## 테마  

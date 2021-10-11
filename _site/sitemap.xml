@@ -141,6 +141,18 @@
 <lastmod>2021-10-04T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>/datastructure/stack/</loc>
+<lastmod>2021-10-07T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>/datastructure/queue/</loc>
+<lastmod>2021-10-10T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>/datastructure/deque/</loc>
+<lastmod>2021-10-11T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>/about/</loc>
 </url>
 <url>
@@ -181,5 +193,8 @@
 </url>
 <url>
 <loc>/page7/</loc>
+</url>
+<url>
+<loc>/page8/</loc>
 </url>
 </urlset>

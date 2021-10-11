@@ -15,12 +15,12 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "DataStructure" %}
-                        <li><a href="/categories/DataStructure" class="">DataStructure ({{category[1].size}})</a></li>
+                        <li><a href="/categories/data_structure" class="">DataStructure ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
                 {% for category in site.categories %}
                     {% if category[0] == "BOJ" %}
-                        <li><a href="/categories/BOJ" class="">BOJ ({{category[1].size}})</a></li>
+                        <li><a href="/categories/boj" class="">BOJ ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
                  {% for category in site.categories %}
@@ -33,7 +33,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Blogs" %}
-                        <li><a href="/categories/Blogs" class="">Blogs ({{category[1].size}})</a></li>
+                        <li><a href="/categories/blogs" class="">Blogs ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

@@ -233,6 +233,12 @@ var store = [{
         "url": "/boj/boj-1021/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 1697. 숨바꼭질",
+        "excerpt":"BOJ 1697. 숨바꼭질 풀이 DP로 풀 수도 있지만 BFS로 문제를 풀어보았다. 1차원 배열에서 시작점에서 도착점 까지 걸리는 시간을 구하면 된다. 예를들어 시작점이 5라면, 먼저 5를 Queue에 넣고 5+1, 5-1, 5*2 를 계산하고, 해당칸은 방문한적이 없으니 visit에 거리 1을 저장한 후 5+1, 5-1, 5*2를 큐에 넣는다. 다음 큐에 존재하는 순서대로 6+1,...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ","BFS"],
+        "url": "/boj/boj-1697/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "BOJ 1926. 그림",
         "excerpt":"BOJ 1926. 그림 풀이 2차원 배열이 주어지고, 배열에서 1로 연결된 그림의 갯수와 가장 큰 그림의 넓이를 구하는 문제이므로 BFS(너비 우선 탐색)을 사용하여 문제를 풀 수 있다. N을 행의 길이, M을 열의 길이라 할 떄 2중 for 문으로 모든 보드를 확인하므로 O(NM)으로 모든 탐색을 완료할 수 있다. 각 그림의 시작점을 확인하기위해...","categories": ["BOJ"],
         "tags": ["Algorithm","BOJ","BFS"],

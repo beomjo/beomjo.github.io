@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-10-18T03:53:40+09:00</updated><id>/feed.xml</id><title type="html">Beom Log</title><subtitle>beomjo amazing website.</subtitle><author><name>beomjo</name></author><entry><title type="html">BOJ 7576. 토마토</title><link href="/boj/boj-7576/" rel="alternate" type="text/html" title="BOJ 7576. 토마토" /><published>2021-10-18T00:00:00+09:00</published><updated>2021-10-18T00:00:00+09:00</updated><id>/boj/boj-7576</id><content type="html" xml:base="/boj/boj-7576/">&lt;h1 id=&quot;boj-7576-토마토&quot;&gt;BOJ 7576. 토마토&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-10-18T03:54:47+09:00</updated><id>/feed.xml</id><title type="html">Beom Log</title><subtitle>beomjo amazing website.</subtitle><author><name>beomjo</name></author><entry><title type="html">BOJ 7576. 토마토</title><link href="/boj/boj-7576/" rel="alternate" type="text/html" title="BOJ 7576. 토마토" /><published>2021-10-18T00:00:00+09:00</published><updated>2021-10-18T00:00:00+09:00</updated><id>/boj/boj-7576</id><content type="html" xml:base="/boj/boj-7576/">&lt;h1 id=&quot;boj-7576-토마토&quot;&gt;BOJ 7576. 토마토&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/39984656/137640516-c50d7c05-fe78-4ed6-9520-a597009e24b2.png&quot; alt=&quot;image&quot; /&gt;
 &lt;img src=&quot;https://user-images.githubusercontent.com/39984656/137640526-35dce816-bb4e-496e-ae9b-f53fb59d9349.png&quot; alt=&quot;image&quot; /&gt;
 &lt;img src=&quot;https://user-images.githubusercontent.com/39984656/137640533-20a8a354-90fd-487a-880c-fab77ffb8820.png&quot; alt=&quot;image&quot; /&gt;
@@ -76,7 +76,7 @@ BFS를 시작하기전 토마토가 존재하는 칸(시작점)들을 찾아 먼
 주어진 값들은 각각 벽, 지나갈 수 있는 공간, 지훈이의 초기위치, 불이난공간을 의미한다.&lt;/p&gt;
 
 &lt;p&gt;불이 상하좌우로 번지므로 불의 전파 경로를 먼저 BFS로 구한다.&lt;br /&gt;
-불이 번질 때마다 거리(시간)을 저장한다.&lt;/p&gt;
+불이 번질 때마다 번진시간을 저장한다.&lt;/p&gt;
 
 &lt;p&gt;그 다음 지훈이가 이동할 수 있는 경로를 BFS로 구하는데,&lt;br /&gt;
 지훈이가 특정 한을 x시간에 방문할 수 있다고 할 때, &lt;br /&gt;

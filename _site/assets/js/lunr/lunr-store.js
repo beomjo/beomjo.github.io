@@ -245,9 +245,21 @@ var store = [{
         "url": "/boj/boj-2178/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 4179. 불!",
+        "excerpt":"BOJ 4179. 불! 풀이 #, ., J, F로 이루어진 2차원 배열이 주어지고, 주어진 값들은 각각 벽, 지나갈 수 있는 공간, 지훈이의 초기위치, 불이난공간을 의미한다. 불이 상하좌우로 번지므로 불의 전파 경로를 먼저 BFS로 구한다. 불이 번질 때마다 거리(시간)을 저장한다. 그 다음 지훈이가 이동할 수 있는 경로를 BFS로 구하는데, 지훈이가 특정 한을...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ","BFS"],
+        "url": "/boj/boj-4179/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "BOJ 4949. 균형잡힌 세상",
         "excerpt":"BOJ 4949. 균형잡힌 세상 풀이 수식의 괄호 쌍을 확인하는 문제이다. 수식의 괄호 쌍을 확인하는 방법은 아래와 같다. 여는 괄호가 나오면 스택에 추가한다 닫는 괄호가 나왔을 경우 2.1 스택이 비어있다면 올바르지 않은 괄호 쌍이다 2.2. 스택의 peek가 짝이 맞지 않는 괄호인 경우 올바르지 않은 괄호 쌍이다 2.3. 스택의 peek가 짝이 맞는...","categories": ["BOJ"],
         "tags": ["Algorithm","BOJ","Stack"],
         "url": "/boj/boj-4949/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
+        "title": "BOJ 7576. 토마토",
+        "excerpt":"BOJ 7576. 토마토 풀이 0과 1로 이루어진 2차원 배열이 주어지고, 1은 토마토 0은 익지않은 토마토 -1은 토마토가 들어있지 않은 빈 칸이다. 토마토에서 상하좌우를 탐색해 상하좌우에 있는 칸이 익지않은 토마토라면 거리를 1씩 증가하며 거리를 dist에 저장한다. 주의할 점은 토마토가 여러개 일 수 있다는 점이다. 즉 BFS를 시작할 시작점이 여러개인 것인데 BFS를...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ","BFS"],
+        "url": "/boj/boj-7576/",
         "teaser": "/assets/images/bio-photo.jpg"
       }]

@@ -239,6 +239,12 @@ var store = [{
         "url": "/boj/boj-1926/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 2178. 미로탐색",
+        "excerpt":"BOJ 2178. 미로 탐색 풀이 0과 1로 이루어진 2차원 배열이 주어지고, 1은 이동할 수 있는경로 0은이동할 수 없는 경로이다. 시작점에서 상하좌우를 탐색하며 값이 1인 탐색할 수 있는 길을통해 (N,M)으로 이동한다. 이동하면서 거리를 1씩 증가하며 dist에 저장한다. 최종 도착점인 (N,M)에 도달하였을 때 거리를 출력한다. import java.io.*; import java.util.LinkedList; import java.util.Queue; class...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ","BFS"],
+        "url": "/boj/boj-2178/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "BOJ 4949. 균형잡힌 세상",
         "excerpt":"BOJ 4949. 균형잡힌 세상 풀이 수식의 괄호 쌍을 확인하는 문제이다. 수식의 괄호 쌍을 확인하는 방법은 아래와 같다. 여는 괄호가 나오면 스택에 추가한다 닫는 괄호가 나왔을 경우 2.1 스택이 비어있다면 올바르지 않은 괄호 쌍이다 2.2. 스택의 peek가 짝이 맞지 않는 괄호인 경우 올바르지 않은 괄호 쌍이다 2.3. 스택의 peek가 짝이 맞는...","categories": ["BOJ"],
         "tags": ["Algorithm","BOJ","Stack"],

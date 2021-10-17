@@ -205,25 +205,31 @@ var store = [{
       },{
         "title": "연결리스트(LinkedList)",
         "excerpt":"연결리스트(LinkedList) LinkedList란? 원소를 저장할 때 그다음 원소가 있는 위치를 포함하는 방식으로 저장하는 방식이다. LinkedList의 성질 K번째 원소를 확인/변경하기 위해 O(K)가 필요함 임의의 위치에 원소를 추가, 임의의 위치에 원소를 제거하기 위해 O(1) 또는 O(N)이 필요함 원소들이 메모리상에 연속해있지 않아 캐시메모리적중률(Cache hit rate)이 낮지만, 할당이 다소 쉽다 LinkedList의 종류 단일 연결 리스트(Singly...","categories": ["DataStructure"],
-        "tags": ["Algorithm","자료구조","LinkedList"],
+        "tags": ["Algorithm","자료구조","LinkedList","DataStructure"],
         "url": "/datastructure/linkedlist/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
         "title": "스택(Stack)",
         "excerpt":"스택(Stack) Stack이란? 한쪽끝에서만 원소를 넣거나 뺄 수 있는 자료구조이다. Stack의 성질 원소의 추가 O(1) 원소 제거 O(1) 제일 상단의 원소 확인 O(1) 제일 상단이 아닌 나머지 원소들의 확인/ 변경이 원칙적으로 불가능 Stack 구현하기 array로 구현한 Stack class Stack { private final int MAX = 100000001; private final int[] data =...","categories": ["DataStructure"],
-        "tags": ["Algorithm","자료구조","Stack"],
+        "tags": ["Algorithm","자료구조","Stack","DataStructure"],
         "url": "/datastructure/stack/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
         "title": "큐(Queue)",
         "excerpt":"큐(Queue) Queue란? 한쪽 끝에서 원소를 넣고 반대쪽 끝에서 원소를 뺄 수 있는 자료구조(FIFO). Queue의 성질 원소의 추가가 O(1) 원소의 제거가 O(1) 제일 앞/뒤의 원소 확인이 O(1) 제일 앞/뒤가 아닌 나머지 원소들의 확인/ 변경이 원칙적으로 불가능 Queue 구현하기 array로 구현한 Queue class Queue { private final int MAX = 100005; private...","categories": ["DataStructure"],
-        "tags": ["Algorithm","자료구조","Queue"],
+        "tags": ["Algorithm","자료구조","Queue","DataStructure"],
         "url": "/datastructure/queue/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
         "title": "덱(Deque)",
         "excerpt":"덱(Deque) Deque이란? Deque(Double Ended Queue) 라는뜻으로 양쪽끝에서 삽입과 삭제가 전부 가능하다. Deque의 성질 원소의 추가가 O(1) 원소의 제거가 O(1) 제일 앞/뒤의 원소 확인이 O(1) 제일 앞/뒤가 아닌 나머지 원소들의 확인/ 변경이 원칙적으로 불가능 Deque 구현하기 array로 구현한 Queue head와 tail의 시작점을 중간으로 설정한다. class Deque { private final int MAX...","categories": ["DataStructure"],
-        "tags": ["Algorithm","자료구조","Deque"],
+        "tags": ["Algorithm","자료구조","Deque","DataStructure"],
         "url": "/datastructure/deque/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
+        "title": "BOJ 1021. 회전하는 큐",
+        "excerpt":"BOJ 1021. 회전하는 큐 풀이 왼쪽 오른쪽으로 회전하는 것은 덱을 이용하여 양쪽에서 삽입 삭제를 해주면 쉽게 구현이 가능하다. 덱에 1~n 까지 삽입한 후, 원하는 값이 나온다면 덱에서 poll, 원하는 값이 나오지 않는다는 왼쪽 또는 오른쪽으로 Shift해준다. 현재 인덱스가 덱사이즈의 절반이상인지 이하인지 판단하여 더 가까운 쪽으로 Shift할 방향을 결정한다. import java.io.*;...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ"],
+        "url": "/boj/boj-1021/",
         "teaser": "/assets/images/bio-photo.jpg"
       }]

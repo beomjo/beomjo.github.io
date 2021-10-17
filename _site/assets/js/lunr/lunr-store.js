@@ -233,6 +233,12 @@ var store = [{
         "url": "/boj/boj-1021/",
         "teaser": "/assets/images/bio-photo.jpg"
       },{
+        "title": "BOJ 1926. 그림",
+        "excerpt":"BOJ 1926. 그림 풀이 2차원 배열이 주어지고, 배열에서 1로 연결된 그림의 갯수와 가장 큰 그림의 넓이를 구하는 문제이므로 BFS(너비 우선 탐색)을 사용하여 문제를 풀 수 있다. N을 행의 길이, M을 열의 길이라 할 떄 2중 for 문으로 모든 보드를 확인하므로 O(NM)으로 모든 탐색을 완료할 수 있다. 각 그림의 시작점을 확인하기위해...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ","BFS"],
+        "url": "/boj/boj-1926/",
+        "teaser": "/assets/images/bio-photo.jpg"
+      },{
         "title": "BOJ 4949. 균형잡힌 세상",
         "excerpt":"BOJ 4949. 균형잡힌 세상 풀이 수식의 괄호 쌍을 확인하는 문제이다. 수식의 괄호 쌍을 확인하는 방법은 아래와 같다. 여는 괄호가 나오면 스택에 추가한다 닫는 괄호가 나왔을 경우 2.1 스택이 비어있다면 올바르지 않은 괄호 쌍이다 2.2. 스택의 peek가 짝이 맞지 않는 괄호인 경우 올바르지 않은 괄호 쌍이다 2.3. 스택의 peek가 짝이 맞는...","categories": ["BOJ"],
         "tags": ["Algorithm","BOJ","Stack"],

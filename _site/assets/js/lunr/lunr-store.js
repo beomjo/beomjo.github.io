@@ -232,4 +232,10 @@ var store = [{
         "tags": ["Algorithm","BOJ"],
         "url": "/boj/boj-1021/",
         "teaser": "/assets/images/bio-photo.jpg"
+      },{
+        "title": "BOJ 4949. 균형잡힌 세상",
+        "excerpt":"BOJ 4949. 균형잡힌 세상 풀이 수식의 괄호 쌍을 확인하는 문제이다. 수식의 괄호 쌍을 확인하는 방법은 아래와 같다. 여는 괄호가 나오면 스택에 추가한다 닫는 괄호가 나왔을 경우 2.1 스택이 비어있다면 올바르지 않은 괄호 쌍이다 2.2. 스택의 peek가 짝이 맞지 않는 괄호인 경우 올바르지 않은 괄호 쌍이다 2.3. 스택의 peek가 짝이 맞는...","categories": ["BOJ"],
+        "tags": ["Algorithm","BOJ","Stack"],
+        "url": "/boj/boj-4949/",
+        "teaser": "/assets/images/bio-photo.jpg"
       }]
